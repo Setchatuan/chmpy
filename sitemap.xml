@@ -4,31 +4,19 @@
      <lastmod>2020-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://peterspackman.github.io/chmpy/parallel/</loc>
-     <lastmod>2020-09-02</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
      <loc>https://peterspackman.github.io/chmpy/shape_descriptors/</loc>
      <lastmod>2020-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://peterspackman.github.io/chmpy/API/sampling/</loc>
+     <loc>https://peterspackman.github.io/chmpy/parallel/</loc>
      <lastmod>2020-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://peterspackman.github.io/chmpy/API/shape_descriptors/</loc>
-     <lastmod>2020-09-02</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://peterspackman.github.io/chmpy/API/core/element/</loc>
+     <loc>https://peterspackman.github.io/chmpy/API/crystal/crystal/</loc>
      <lastmod>2020-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://peterspackman.github.io/chmpy/API/core/molecule/</loc>
-     <lastmod>2020-09-02</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://peterspackman.github.io/chmpy/API/crystal/asymmetric_unit/</loc>
      <lastmod>2020-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -48,7 +36,7 @@
      <lastmod>2020-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://peterspackman.github.io/chmpy/API/ext/charges/</loc>
+     <loc>https://peterspackman.github.io/chmpy/API/crystal/asymmetric_unit/</loc>
      <lastmod>2020-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -56,15 +44,23 @@
      <lastmod>2020-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://peterspackman.github.io/chmpy/API/core/element/</loc>
+     <lastmod>2020-09-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://peterspackman.github.io/chmpy/API/shape_descriptors/</loc>
+     <lastmod>2020-09-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://peterspackman.github.io/chmpy/API/sampling/</loc>
+     <lastmod>2020-09-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://peterspackman.github.io/chmpy/API/ext/charges/</loc>
+     <lastmod>2020-09-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://peterspackman.github.io/chmpy/API/util/color/</loc>
-     <lastmod>2020-09-02</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://peterspackman.github.io/chmpy/API/util/dict/</loc>
-     <lastmod>2020-09-02</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://peterspackman.github.io/chmpy/API/util/mesh/</loc>
      <lastmod>2020-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -73,6 +69,14 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://peterspackman.github.io/chmpy/API/util/text/</loc>
+     <lastmod>2020-09-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://peterspackman.github.io/chmpy/API/util/mesh/</loc>
+     <lastmod>2020-09-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://peterspackman.github.io/chmpy/API/util/dict/</loc>
      <lastmod>2020-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
