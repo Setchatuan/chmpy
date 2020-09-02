@@ -1,0 +1,1962 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://peterspackman.github.io/chmpy/API/core/element/" rel="canonical"/>
+<link href="../../../assets/images/favicon.png" rel="shortcut icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-5.4.0" name="generator"/>
+<title>element - chmpy</title>
+<link href="../../../assets/stylesheets/main.fe0cca5b.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#chmpy.core.element">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header-nav md-grid">
+<a aria-label="chmpy" class="md-header-nav__button md-logo" href="https://peterspackman.github.io/chmpy/" title="chmpy">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
+</a>
+<label class="md-header-nav__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header-nav__title" data-md-component="header-title">
+<div class="md-header-nav__ellipsis">
+<span class="md-header-nav__topic md-ellipsis">
+            chmpy
+          </span>
+<span class="md-header-nav__topic md-ellipsis">
+            
+              element
+            
+          </span>
+</div>
+</div>
+<label class="md-header-nav__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" data-md-component="search-reset" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="chmpy" class="md-nav__button md-logo" href="https://peterspackman.github.io/chmpy/" title="chmpy">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
+</a>
+    chmpy
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../.." title="chmpy">
+      chmpy
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../parallel/" title="Parallelization">
+      Parallelization
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../shape_descriptors/" title="Shape descriptors">
+      Shape descriptors
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
+      API
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="API" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        API
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../sampling/" title="Sampling">
+      Sampling
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../shape_descriptors/" title="Shape descriptors">
+      Shape descriptors
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" id="nav-4-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-3">
+      Core
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Core" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-3">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Core
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        element
+        <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"></path></svg>
+</span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./" title="element">
+      element
+    </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element">
+    chmpy.core.element
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element">
+    Element
+  </a>
+<nav aria-label="Element" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element.ball_stick_radius">
+    ball_stick_radius
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element.color">
+    color
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element.covalent_radius">
+    covalent_radius
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element.vdw_radius">
+    vdw_radius
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element.__eq__">
+    __eq__()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element.__ge__">
+    __ge__()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element.__gt__">
+    __gt__()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element.__hash__">
+    __hash__()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element.__init__">
+    __init__()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element.__le__">
+    __le__()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element.__lt__">
+    __lt__()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element.__repr__">
+    __repr__()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element.from_atomic_number">
+    from_atomic_number()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element.from_label">
+    from_label()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element.from_string">
+    from_string()
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.chemical_formula">
+    chemical_formula()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.cov_radii">
+    cov_radii()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.element_names">
+    element_names()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.element_symbols">
+    element_symbols()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.vdw_radii">
+    vdw_radii()
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../molecule/" title="molecule">
+      molecule
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" id="nav-4-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-4">
+      Crystal
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Crystal" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-4">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Crystal
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../crystal/asymmetric_unit/" title="asymmetric_unit">
+      asymmetric_unit
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../crystal/crystal/" title="crystal">
+      crystal
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../crystal/space_group/" title="space_group">
+      space_group
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../crystal/symmetry_operation/" title="symmetry_operation">
+      symmetry_operation
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../crystal/unit_cell/" title="unit_cell">
+      unit_cell
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-5" id="nav-4-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-5">
+      Ext
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Ext" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-5">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Ext
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ext/charges/" title="chmpy.ext.charges">
+      chmpy.ext.charges
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ext/elastic_tensor/" title="chmpy.ext.elastic_tensor">
+      chmpy.ext.elastic_tensor
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6" id="nav-4-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-6">
+      Util
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Util" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-6">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Util
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../util/color/" title="chmpy.util.color">
+      chmpy.util.color
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../util/dict/" title="chmpy.util.dict">
+      chmpy.util.dict
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../util/mesh/" title="chmpy.util.mesh">
+      chmpy.util.mesh
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../util/num/" title="chmpy.util.num">
+      chmpy.util.num
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../util/text/" title="chmpy.util.text">
+      chmpy.util.text
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element">
+    chmpy.core.element
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element">
+    Element
+  </a>
+<nav aria-label="Element" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element.ball_stick_radius">
+    ball_stick_radius
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element.color">
+    color
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element.covalent_radius">
+    covalent_radius
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element.vdw_radius">
+    vdw_radius
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element.__eq__">
+    __eq__()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element.__ge__">
+    __ge__()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element.__gt__">
+    __gt__()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element.__hash__">
+    __hash__()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element.__init__">
+    __init__()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element.__le__">
+    __le__()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element.__lt__">
+    __lt__()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element.__repr__">
+    __repr__()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element.from_atomic_number">
+    from_atomic_number()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element.from_label">
+    from_label()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.Element.from_string">
+    from_string()
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.chemical_formula">
+    chemical_formula()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.cov_radii">
+    cov_radii()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.element_names">
+    element_names()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.element_symbols">
+    element_symbols()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.core.element.vdw_radii">
+    vdw_radii()
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<h1>element</h1>
+<div class="doc doc-object doc-module">
+<h2 class="hidden-toc" href="#chmpy.core.element" id="chmpy.core.element" style="visibility: hidden; width: 0; height: 0;">
+</h2>
+<div class="doc doc-contents first">
+<p>Module for static information about chemical elements.</p>
+<div class="doc doc-children">
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="chmpy.core.element.Element">
+<code>Element</code>
+</h2>
+<div class="doc doc-contents">
+<p>Storage class for information about a chemical element.</p>
+<div class="codehilite">
+<pre><span></span><code><span class="o">!!!</span> <span class="n">examples</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">h</span> <span class="o">=</span> <span class="n">Element</span><span class="p">.</span><span class="n">from_string</span><span class="p">(</span><span class="ss">"H"</span><span class="p">)</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="k">c</span> <span class="o">=</span> <span class="n">Element</span><span class="p">.</span><span class="n">from_string</span><span class="p">(</span><span class="ss">"C"</span><span class="p">)</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">n</span> <span class="o">=</span> <span class="n">Element</span><span class="p">.</span><span class="n">from_atomic_number</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">f</span> <span class="o">=</span> <span class="n">Element</span><span class="p">.</span><span class="n">from_string</span><span class="p">(</span><span class="ss">"F"</span><span class="p">)</span>
+
+    <span class="n">Element</span> <span class="n">implements</span> <span class="n">an</span> <span class="n">ordering</span> <span class="k">for</span> <span class="n">sorting</span> <span class="k">in</span> <span class="n">e</span><span class="p">.</span><span class="k">g</span><span class="p">.</span>
+    <span class="n">molecular</span> <span class="n">formulae</span> <span class="k">where</span> <span class="n">carbon</span> <span class="k">and</span> <span class="n">hydrogen</span> <span class="n">come</span> <span class="k">first</span><span class="p">,</span>
+    <span class="n">otherwise</span> <span class="n">elements</span> <span class="k">are</span> <span class="n">sorted</span> <span class="k">in</span> <span class="k">order</span> <span class="k">of</span> <span class="k">atomic</span> <span class="nb">number</span><span class="p">.</span>
+
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">sorted</span><span class="p">([</span><span class="n">h</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="k">c</span><span class="p">,</span> <span class="n">n</span><span class="p">])</span>
+    <span class="p">[</span><span class="k">C</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">F</span><span class="p">,</span> <span class="n">F</span><span class="p">]</span>
+</code></pre>
+</div>
+<div class="doc doc-children">
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.core.element.Element.ball_stick_radius">
+<code class="highlight">
+ball_stick_radius: <span class="nb">float</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>The radius of this element in a ball and stick representation.</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.core.element.Element.color">
+<code class="highlight">
+color        </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>The color RGBA color of this element.</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.core.element.Element.covalent_radius">
+<code class="highlight">
+covalent_radius: <span class="nb">float</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>The covalent radius in angstroms.</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.core.element.Element.vdw_radius">
+<code class="highlight">
+vdw_radius: <span class="nb">float</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>The van der Waals radius in angstroms.</p>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="chmpy.core.element.Element.__eq__">
+<code class="highlight language-python">
+__eq__<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-special"><code>special</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Check if two Elements have the same atomic number.</p>
+<details class="quote">
+<summary>Source code in <code>chmpy/core/element.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>391
+392
+393
+394
+395</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+    <span class="sd">"""Check if two Elements have the same atomic number."""</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_valid_operand</span><span class="p">(</span><span class="n">other</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">atomic_number</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">atomic_number</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="chmpy.core.element.Element.__ge__">
+<code class="highlight language-python">
+__ge__<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="bp">NotImplemented</span><span class="o">=</span><span class="bp">NotImplemented</span><span class="p">)</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-special"><code>special</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Return a &gt;= b.  Computed by @total_ordering from (not a &lt; b).</p>
+<details class="quote">
+<summary>Source code in <code>chmpy/core/element.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>100
+101
+102
+103
+104
+105</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">_ge_from_lt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="bp">NotImplemented</span><span class="o">=</span><span class="bp">NotImplemented</span><span class="p">):</span>
+    <span class="s1">'Return a &gt;= b.  Computed by @total_ordering from (not a &lt; b).'</span>
+    <span class="n">op_result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__lt__</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">op_result</span> <span class="ow">is</span> <span class="bp">NotImplemented</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">op_result</span>
+    <span class="k">return</span> <span class="ow">not</span> <span class="n">op_result</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="chmpy.core.element.Element.__gt__">
+<code class="highlight language-python">
+__gt__<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="bp">NotImplemented</span><span class="o">=</span><span class="bp">NotImplemented</span><span class="p">)</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-special"><code>special</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Return a &gt; b.  Computed by @total_ordering from (not a &lt; b) and (a != b).</p>
+<details class="quote">
+<summary>Source code in <code>chmpy/core/element.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>88
+89
+90
+91
+92
+93</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">_gt_from_lt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="bp">NotImplemented</span><span class="o">=</span><span class="bp">NotImplemented</span><span class="p">):</span>
+    <span class="s1">'Return a &gt; b.  Computed by @total_ordering from (not a &lt; b) and (a != b).'</span>
+    <span class="n">op_result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__lt__</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">op_result</span> <span class="ow">is</span> <span class="bp">NotImplemented</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">op_result</span>
+    <span class="k">return</span> <span class="ow">not</span> <span class="n">op_result</span> <span class="ow">and</span> <span class="bp">self</span> <span class="o">!=</span> <span class="n">other</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="chmpy.core.element.Element.__hash__">
+<code class="highlight language-python">
+__hash__<span class="p">(</span><span class="bp">self</span><span class="p">)</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-special"><code>special</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Hash of this element (its atomic number).</p>
+<details class="quote">
+<summary>Source code in <code>chmpy/core/element.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>384
+385
+386</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="fm">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">"""Hash of this element (its atomic number)."""</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">atomic_number</span><span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="chmpy.core.element.Element.__init__">
+<code class="highlight language-python">
+__init__<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">atomic_number</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">symbol</span><span class="p">,</span> <span class="n">cov</span><span class="p">,</span> <span class="n">vdw</span><span class="p">,</span> <span class="n">mass</span><span class="p">)</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-special"><code>special</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Initialize an Element from its chemical data.</p>
+<details class="quote">
+<summary>Source code in <code>chmpy/core/element.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>270
+271
+272
+273
+274
+275
+276
+277</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">atomic_number</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">symbol</span><span class="p">,</span> <span class="n">cov</span><span class="p">,</span> <span class="n">vdw</span><span class="p">,</span> <span class="n">mass</span><span class="p">):</span>
+    <span class="sd">"""Initialize an Element from its chemical data."""</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">atomic_number</span> <span class="o">=</span> <span class="n">atomic_number</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">symbol</span> <span class="o">=</span> <span class="n">symbol</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">cov</span> <span class="o">=</span> <span class="n">cov</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">vdw</span> <span class="o">=</span> <span class="n">vdw</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">mass</span> <span class="o">=</span> <span class="n">mass</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="chmpy.core.element.Element.__le__">
+<code class="highlight language-python">
+__le__<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="bp">NotImplemented</span><span class="o">=</span><span class="bp">NotImplemented</span><span class="p">)</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-special"><code>special</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Return a &lt;= b.  Computed by @total_ordering from (a &lt; b) or (a == b).</p>
+<details class="quote">
+<summary>Source code in <code>chmpy/core/element.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>95
+96
+97
+98</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">_le_from_lt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="bp">NotImplemented</span><span class="o">=</span><span class="bp">NotImplemented</span><span class="p">):</span>
+    <span class="s1">'Return a &lt;= b.  Computed by @total_ordering from (a &lt; b) or (a == b).'</span>
+    <span class="n">op_result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__lt__</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">op_result</span> <span class="ow">or</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="chmpy.core.element.Element.__lt__">
+<code class="highlight language-python">
+__lt__<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-special"><code>special</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Check which element comes before the other in chemical formulae (C first, then order of atomic number).</p>
+<details class="quote">
+<summary>Source code in <code>chmpy/core/element.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="fm">__lt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+    <span class="sd">"""Check which element comes before the other in chemical formulae (C first, then order of atomic number)."""</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_valid_operand</span><span class="p">(</span><span class="n">other</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+    <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">atomic_number</span><span class="p">,</span> <span class="n">other</span><span class="o">.</span><span class="n">atomic_number</span>
+    <span class="k">if</span> <span class="n">n1</span> <span class="o">==</span> <span class="n">n2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">if</span> <span class="n">n1</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">elif</span> <span class="n">n2</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n1</span> <span class="o">&lt;</span> <span class="n">n2</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="chmpy.core.element.Element.__repr__">
+<code class="highlight language-python">
+__repr__<span class="p">(</span><span class="bp">self</span><span class="p">)</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-special"><code>special</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Represent this element as a string for REPL.</p>
+<details class="quote">
+<summary>Source code in <code>chmpy/core/element.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>380
+381
+382</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">"""Represent this element as a string for REPL."""</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">symbol</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="chmpy.core.element.Element.from_atomic_number">
+<code class="highlight language-python">
+from_atomic_number<span class="p">(</span><span class="n">n</span><span class="p">)</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-staticmethod"><code>staticmethod</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Create an element from a given atomic number.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>n</code></td>
+<td><code>int</code></td>
+<td>
+<p>the atomic number of the element</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Element</code></td>
+<td>
+<p>Element: an Element object if atomic number was valid, otherwise an exception is raised</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Examples:</strong></p>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>1
+2
+3
+4</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">Element</span><span class="o">.</span><span class="n">from_atomic_number</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">He</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Element</span><span class="p">[</span><span class="mi">79</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
+<span class="s1">'gold'</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+<details class="quote">
+<summary>Source code in <code>chmpy/core/element.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="nd">@staticmethod</span>
+<span class="k">def</span> <span class="nf">from_atomic_number</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">"Element"</span><span class="p">:</span>
+    <span class="sd">"""Create an element from a given atomic number.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        n (int): the atomic number of the element</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Element: an Element object if atomic number was valid, otherwise an exception is raised</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        &gt;&gt;&gt; Element.from_atomic_number(2)</span>
+<span class="sd">        He</span>
+<span class="sd">        &gt;&gt;&gt; Element[79].name</span>
+<span class="sd">        'gold'</span>
+<span class="sd">    """</span>
+    <span class="k">return</span> <span class="n">Element</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="o">*</span><span class="n">_ELEMENT_DATA</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="chmpy.core.element.Element.from_label">
+<code class="highlight language-python">
+from_label<span class="p">(</span><span class="n">label</span><span class="p">)</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-staticmethod"><code>staticmethod</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Create an element from a label e.g. 'C1', 'H2_F2___i' etc.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>l</code></td>
+<td><code>str</code></td>
+<td>
+<p>a string representation of an element in the periodic table</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Element</code></td>
+<td>
+<p>Element: an Element object if the conversion was successful, otherwise an exception is raised</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Examples:</strong></p>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>1
+2
+3
+4
+5
+6</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">Element</span><span class="o">.</span><span class="n">from_label</span><span class="p">(</span><span class="s2">"C1"</span><span class="p">)</span>
+<span class="n">C</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Element</span><span class="o">.</span><span class="n">from_label</span><span class="p">(</span><span class="s2">"H"</span><span class="p">)</span>
+<span class="n">H</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Element</span><span class="p">[</span><span class="s2">"LI2_F2____1____i"</span><span class="p">]</span>
+<span class="n">Li</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+<p>An ambiguous case, will make this Calcium not Carbon</p>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>1
+2</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">Element</span><span class="o">.</span><span class="n">from_label</span><span class="p">(</span><span class="s2">"Ca2_F2____1____i"</span><span class="p">)</span>
+<span class="n">Ca</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+<details class="quote">
+<summary>Source code in <code>chmpy/core/element.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="nd">@staticmethod</span>
+<span class="k">def</span> <span class="nf">from_label</span><span class="p">(</span><span class="n">label</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">"Element"</span><span class="p">:</span>
+    <span class="sd">"""Create an element from a label e.g. 'C1', 'H2_F2___i' etc.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        l (str): a string representation of an element in the periodic table</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Element: an Element object if the conversion was successful, otherwise an exception is raised</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        &gt;&gt;&gt; Element.from_label("C1")</span>
+<span class="sd">        C</span>
+<span class="sd">        &gt;&gt;&gt; Element.from_label("H")</span>
+<span class="sd">        H</span>
+<span class="sd">        &gt;&gt;&gt; Element["LI2_F2____1____i"]</span>
+<span class="sd">        Li</span>
+
+<span class="sd">        An ambiguous case, will make this Calcium not Carbon</span>
+<span class="sd">        &gt;&gt;&gt; Element.from_label("Ca2_F2____1____i")</span>
+<span class="sd">        Ca</span>
+<span class="sd">    """</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">_SYMBOL_REGEX</span><span class="p">,</span> <span class="n">label</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">m</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Could not determine symbol from </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">label</span><span class="p">))</span>
+    <span class="n">sym</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">sym</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">_EL_FROM_SYM</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Could not determine symbol from </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">label</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">Element</span><span class="p">(</span><span class="o">*</span><span class="n">_EL_FROM_SYM</span><span class="p">[</span><span class="n">sym</span><span class="p">])</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="chmpy.core.element.Element.from_string">
+<code class="highlight language-python">
+from_string<span class="p">(</span><span class="n">s</span><span class="p">)</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-staticmethod"><code>staticmethod</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Create an element from a given element symbol.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>s</code></td>
+<td><code>str</code></td>
+<td>
+<p>a string representation of an element in the periodic table</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Element</code></td>
+<td>
+<p>Element: an Element object if the conversion was successful, otherwise an exception is raised</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Examples:</strong></p>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>1
+2
+3
+4
+5
+6</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">Element</span><span class="o">.</span><span class="n">from_string</span><span class="p">(</span><span class="s2">"h"</span><span class="p">)</span>
+<span class="n">H</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Element</span><span class="p">[</span><span class="s2">"rn"</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
+<span class="s1">'radon'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Element</span><span class="p">[</span><span class="s2">"AC"</span><span class="p">]</span><span class="o">.</span><span class="n">cov</span>
+<span class="mf">2.15</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+<details class="quote">
+<summary>Source code in <code>chmpy/core/element.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="nd">@staticmethod</span>
+<span class="k">def</span> <span class="nf">from_string</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">"Element"</span><span class="p">:</span>
+    <span class="sd">"""Create an element from a given element symbol.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        s (str): a string representation of an element in the periodic table</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Element: an Element object if the conversion was successful, otherwise an exception is raised</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        &gt;&gt;&gt; Element.from_string("h")</span>
+<span class="sd">        H</span>
+<span class="sd">        &gt;&gt;&gt; Element["rn"].name</span>
+<span class="sd">        'radon'</span>
+<span class="sd">        &gt;&gt;&gt; Element["AC"].cov</span>
+<span class="sd">        2.15</span>
+<span class="sd">    """</span>
+    <span class="n">symbol</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">symbol</span> <span class="o">==</span> <span class="s2">"D"</span><span class="p">:</span>
+        <span class="n">symbol</span> <span class="o">=</span> <span class="s2">"H"</span>
+    <span class="k">if</span> <span class="n">symbol</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
+        <span class="k">return</span> <span class="n">Element</span><span class="o">.</span><span class="n">from_atomic_number</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">symbol</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">symbol</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">_EL_FROM_SYM</span><span class="p">:</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">symbol</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">_EL_FROM_NAME</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Element</span><span class="o">.</span><span class="n">from_label</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Element</span><span class="p">(</span><span class="o">*</span><span class="n">_EL_FROM_NAME</span><span class="p">[</span><span class="n">name</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">Element</span><span class="p">(</span><span class="o">*</span><span class="n">_EL_FROM_SYM</span><span class="p">[</span><span class="n">symbol</span><span class="p">])</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="chmpy.core.element.chemical_formula">
+<code class="highlight language-python">
+chemical_formula<span class="p">(</span><span class="n">elements</span><span class="p">,</span> <span class="n">subscript</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Calculate the chemical formula for the given list of elements.</p>
+<p><strong>Examples:</strong></p>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>1
+2
+3
+4</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">chemical_formula</span><span class="p">([</span><span class="s1">'O'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">,</span> <span class="s1">'O'</span><span class="p">])</span>
+<span class="s1">'CO2'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">chemical_formula</span><span class="p">([</span><span class="s1">'C'</span><span class="p">,</span> <span class="s1">'H'</span><span class="p">,</span> <span class="s1">'O'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">])</span>
+<span class="s1">'BCHO'</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>elements</code></td>
+<td><code>List[Element or str]</code></td>
+<td>
+<p>a list of elements or element symbols.
+Note that if a list of strings are provided the order of chemical
+symbols may not match convention.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>subscript</code></td>
+<td><code>bool, optoinal</code></td>
+<td>
+<p>toggle to use unicode subscripts for the chemical formula string</p>
+</td>
+<td><code>False</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>str</code></td>
+<td>
+<p>the chemical formula</p>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>chmpy/core/element.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">chemical_formula</span><span class="p">(</span><span class="n">elements</span><span class="p">,</span> <span class="n">subscript</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">"""Calculate the chemical formula for the given list of elements.</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        &gt;&gt;&gt; chemical_formula(['O', 'C', 'O'])</span>
+<span class="sd">        'CO2'</span>
+<span class="sd">        &gt;&gt;&gt; chemical_formula(['C', 'H', 'O', 'B'])</span>
+<span class="sd">        'BCHO'</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        elements (List[Element or str]): a list of elements or element symbols.</span>
+<span class="sd">            Note that if a list of strings are provided the order of chemical</span>
+<span class="sd">            symbols may not match convention.</span>
+<span class="sd">        subscript (bool, optoinal): toggle to use unicode subscripts for the chemical formula string</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: the chemical formula</span>
+<span class="sd">    """</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">elements</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">subscript</span><span class="p">:</span>
+        <span class="n">blocks</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">el</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">count</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">c</span> <span class="o">=</span> <span class="s2">""</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="mh">0x2080</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="p">))</span> <span class="k">if</span> <span class="n">c</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="s2">""</span>
+            <span class="n">blocks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">el</span><span class="si">}{</span><span class="n">c</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">blocks</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">el</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">count</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">c</span> <span class="o">=</span> <span class="n">c</span> <span class="k">if</span> <span class="n">c</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="s2">""</span>
+            <span class="n">blocks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">el</span><span class="si">}{</span><span class="n">c</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s2">""</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">blocks</span><span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="chmpy.core.element.cov_radii">
+<code class="highlight language-python">
+cov_radii<span class="p">(</span><span class="n">atomic_numbers</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Return the covalent radii for the given atomic numbers.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>atomic_numbers</code></td>
+<td><code>array_like</code></td>
+<td>
+<p>the (N,) length integer array of atomic numbers</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>np.ndarray</code></td>
+<td>
+<p>(N,) array of floats representing covalent radii</p>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>chmpy/core/element.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">cov_radii</span><span class="p">(</span><span class="n">atomic_numbers</span><span class="p">):</span>
+    <span class="sd">"""Return the covalent radii for the given atomic numbers.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        atomic_numbers (array_like): the (N,) length integer array of atomic numbers</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        np.ndarray: (N,) array of floats representing covalent radii</span>
+<span class="sd">    """</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">atomic_numbers</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">or</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">atomic_numbers</span> <span class="o">&gt;</span> <span class="mi">103</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"All elements must be atomic numbers between [1,103]"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">_ELEMENT_DATA</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">atomic_numbers</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="chmpy.core.element.element_names">
+<code class="highlight language-python">
+element_names<span class="p">(</span><span class="n">atomic_numbers</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Return the element names for the given atomic numbers.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>atomic_numbers</code></td>
+<td><code>array_like</code></td>
+<td>
+<p>the (N,) length integer array of atomic numbers</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List[str]</code></td>
+<td>
+<p>(N,) list of strings representing element names</p>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>chmpy/core/element.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">element_names</span><span class="p">(</span><span class="n">atomic_numbers</span><span class="p">):</span>
+    <span class="sd">"""Return the element names for the given atomic numbers.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        atomic_numbers (array_like): the (N,) length integer array of atomic numbers</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        List[str]: (N,) list of strings representing element names</span>
+<span class="sd">    """</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">atomic_numbers</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">or</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">atomic_numbers</span> <span class="o">&gt;</span> <span class="mi">103</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"All elements must be atomic numbers between [1,103]"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">_ELEMENT_DATA</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">atomic_numbers</span><span class="p">]</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="chmpy.core.element.element_symbols">
+<code class="highlight language-python">
+element_symbols<span class="p">(</span><span class="n">atomic_numbers</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Return the element symbols for the given atomic numbers.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>atomic_numbers</code></td>
+<td><code>array_like</code></td>
+<td>
+<p>the (N,) length integer array of atomic numbers</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List[str]</code></td>
+<td>
+<p>(N,) list of strings representing element symbols</p>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>chmpy/core/element.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">element_symbols</span><span class="p">(</span><span class="n">atomic_numbers</span><span class="p">):</span>
+    <span class="sd">"""Return the element symbols for the given atomic numbers.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        atomic_numbers (array_like): the (N,) length integer array of atomic numbers</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        List[str]: (N,) list of strings representing element symbols</span>
+<span class="sd">    """</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">atomic_numbers</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">or</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">atomic_numbers</span> <span class="o">&gt;</span> <span class="mi">103</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"All elements must be atomic numbers between [1,103]"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">_ELEMENT_DATA</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">atomic_numbers</span><span class="p">]</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="chmpy.core.element.vdw_radii">
+<code class="highlight language-python">
+vdw_radii<span class="p">(</span><span class="n">atomic_numbers</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Return the van der Waals radii for the given atomic numbers.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>atomic_numbers</code></td>
+<td><code>array_like</code></td>
+<td>
+<p>the (N,) length integer array of atomic numbers</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>np.ndarray</code></td>
+<td>
+<p>(N,) array of floats representing van der Waals radii</p>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>chmpy/core/element.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">vdw_radii</span><span class="p">(</span><span class="n">atomic_numbers</span><span class="p">):</span>
+    <span class="sd">"""Return the van der Waals radii for the given atomic numbers.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        atomic_numbers (array_like): the (N,) length integer array of atomic numbers</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        np.ndarray: (N,) array of floats representing van der Waals radii</span>
+<span class="sd">    """</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">atomic_numbers</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">or</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">atomic_numbers</span> <span class="o">&gt;</span> <span class="mi">103</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"All elements must be atomic numbers between [1,103]"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">_ELEMENT_DATA</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">atomic_numbers</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav aria-label="Footer" class="md-footer-nav__inner md-grid">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../../shape_descriptors/" rel="prev" title="Shape descriptors">
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Shape descriptors
+              </div>
+</div>
+</a>
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../molecule/" rel="next" title="molecule">
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                  Next
+                </span>
+                molecule
+              </div>
+</div>
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../../../assets/javascripts/vendor.d710d30a.min.js"></script>
+<script src="../../../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+<script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.a68abb33.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+</body>
+</html>

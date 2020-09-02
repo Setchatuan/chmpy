@@ -1,0 +1,2879 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://peterspackman.github.io/chmpy/API/crystal/unit_cell/" rel="canonical"/>
+<link href="../../../assets/images/favicon.png" rel="shortcut icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-5.4.0" name="generator"/>
+<title>unit_cell - chmpy</title>
+<link href="../../../assets/stylesheets/main.fe0cca5b.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#chmpy.crystal.unit_cell">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header-nav md-grid">
+<a aria-label="chmpy" class="md-header-nav__button md-logo" href="https://peterspackman.github.io/chmpy/" title="chmpy">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
+</a>
+<label class="md-header-nav__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header-nav__title" data-md-component="header-title">
+<div class="md-header-nav__ellipsis">
+<span class="md-header-nav__topic md-ellipsis">
+            chmpy
+          </span>
+<span class="md-header-nav__topic md-ellipsis">
+            
+              unit_cell
+            
+          </span>
+</div>
+</div>
+<label class="md-header-nav__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" data-md-component="search-reset" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="chmpy" class="md-nav__button md-logo" href="https://peterspackman.github.io/chmpy/" title="chmpy">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
+</a>
+    chmpy
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../.." title="chmpy">
+      chmpy
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../parallel/" title="Parallelization">
+      Parallelization
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../shape_descriptors/" title="Shape descriptors">
+      Shape descriptors
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
+      API
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="API" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        API
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../sampling/" title="Sampling">
+      Sampling
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../shape_descriptors/" title="Shape descriptors">
+      Shape descriptors
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" id="nav-4-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-3">
+      Core
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Core" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-3">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Core
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../core/element/" title="element">
+      element
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../core/molecule/" title="molecule">
+      molecule
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" id="nav-4-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-4">
+      Crystal
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Crystal" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-4">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Crystal
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../asymmetric_unit/" title="asymmetric_unit">
+      asymmetric_unit
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../crystal/" title="crystal">
+      crystal
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../space_group/" title="space_group">
+      space_group
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../symmetry_operation/" title="symmetry_operation">
+      symmetry_operation
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        unit_cell
+        <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"></path></svg>
+</span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./" title="unit_cell">
+      unit_cell
+    </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell">
+    chmpy.crystal.unit_cell
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell">
+    UnitCell
+  </a>
+<nav aria-label="UnitCell" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.a">
+    a
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.a_star">
+    a_star
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.abc_different">
+    abc_different
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.abc_equal">
+    abc_equal
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.alpha">
+    alpha
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.alpha_deg">
+    alpha_deg
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.alpha_star">
+    alpha_star
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.angles_different">
+    angles_different
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.b">
+    b
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.b_star">
+    b_star
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.beta">
+    beta
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.beta_deg">
+    beta_deg
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.beta_star">
+    beta_star
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.c">
+    c
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.c_star">
+    c_star
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.direct_homogeneous">
+    direct_homogeneous
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.gamma">
+    gamma
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.gamma_deg">
+    gamma_deg
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.gamma_star">
+    gamma_star
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.is_cubic">
+    is_cubic
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.is_hexagonal">
+    is_hexagonal
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.is_monoclinic">
+    is_monoclinic
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.is_orthorhombic">
+    is_orthorhombic
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.is_rhombohedral">
+    is_rhombohedral
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.is_tetragonal">
+    is_tetragonal
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.is_triclinic">
+    is_triclinic
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.lattice">
+    lattice
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.orthogonal">
+    orthogonal
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.parameters">
+    parameters
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.reciprocal_lattice">
+    reciprocal_lattice
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.v_a">
+    v_a
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.v_a_star">
+    v_a_star
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.v_b">
+    v_b
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.v_b_star">
+    v_b_star
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.v_c">
+    v_c
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.v_c_star">
+    v_c_star
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.__init__">
+    __init__()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.cubic">
+    cubic()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.from_lengths_and_angles">
+    from_lengths_and_angles()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.from_unique_parameters">
+    from_unique_parameters()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.hexagonal">
+    hexagonal()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.monoclinic">
+    monoclinic()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.orthorhombic">
+    orthorhombic()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.rhombohedral">
+    rhombohedral()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.set_lengths_and_angles">
+    set_lengths_and_angles()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.set_vectors">
+    set_vectors()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.tetragonal">
+    tetragonal()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.to_cartesian">
+    to_cartesian()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.to_fractional">
+    to_fractional()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.triclinic">
+    triclinic()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.volume">
+    volume()
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-5" id="nav-4-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-5">
+      Ext
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Ext" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-5">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Ext
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ext/charges/" title="chmpy.ext.charges">
+      chmpy.ext.charges
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ext/elastic_tensor/" title="chmpy.ext.elastic_tensor">
+      chmpy.ext.elastic_tensor
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6" id="nav-4-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-6">
+      Util
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Util" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-6">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Util
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../util/color/" title="chmpy.util.color">
+      chmpy.util.color
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../util/dict/" title="chmpy.util.dict">
+      chmpy.util.dict
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../util/mesh/" title="chmpy.util.mesh">
+      chmpy.util.mesh
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../util/num/" title="chmpy.util.num">
+      chmpy.util.num
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../util/text/" title="chmpy.util.text">
+      chmpy.util.text
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell">
+    chmpy.crystal.unit_cell
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell">
+    UnitCell
+  </a>
+<nav aria-label="UnitCell" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.a">
+    a
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.a_star">
+    a_star
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.abc_different">
+    abc_different
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.abc_equal">
+    abc_equal
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.alpha">
+    alpha
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.alpha_deg">
+    alpha_deg
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.alpha_star">
+    alpha_star
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.angles_different">
+    angles_different
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.b">
+    b
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.b_star">
+    b_star
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.beta">
+    beta
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.beta_deg">
+    beta_deg
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.beta_star">
+    beta_star
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.c">
+    c
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.c_star">
+    c_star
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.direct_homogeneous">
+    direct_homogeneous
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.gamma">
+    gamma
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.gamma_deg">
+    gamma_deg
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.gamma_star">
+    gamma_star
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.is_cubic">
+    is_cubic
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.is_hexagonal">
+    is_hexagonal
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.is_monoclinic">
+    is_monoclinic
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.is_orthorhombic">
+    is_orthorhombic
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.is_rhombohedral">
+    is_rhombohedral
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.is_tetragonal">
+    is_tetragonal
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.is_triclinic">
+    is_triclinic
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.lattice">
+    lattice
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.orthogonal">
+    orthogonal
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.parameters">
+    parameters
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.reciprocal_lattice">
+    reciprocal_lattice
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.v_a">
+    v_a
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.v_a_star">
+    v_a_star
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.v_b">
+    v_b
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.v_b_star">
+    v_b_star
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.v_c">
+    v_c
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.v_c_star">
+    v_c_star
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.__init__">
+    __init__()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.cubic">
+    cubic()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.from_lengths_and_angles">
+    from_lengths_and_angles()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.from_unique_parameters">
+    from_unique_parameters()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.hexagonal">
+    hexagonal()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.monoclinic">
+    monoclinic()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.orthorhombic">
+    orthorhombic()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.rhombohedral">
+    rhombohedral()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.set_lengths_and_angles">
+    set_lengths_and_angles()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.set_vectors">
+    set_vectors()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.tetragonal">
+    tetragonal()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.to_cartesian">
+    to_cartesian()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.to_fractional">
+    to_fractional()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.triclinic">
+    triclinic()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.crystal.unit_cell.UnitCell.volume">
+    volume()
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<h1>unit_cell</h1>
+<div class="doc doc-object doc-module">
+<h2 class="hidden-toc" href="#chmpy.crystal.unit_cell" id="chmpy.crystal.unit_cell" style="visibility: hidden; width: 0; height: 0;">
+</h2>
+<div class="doc doc-contents first">
+<div class="doc doc-children">
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell">
+<code>UnitCell</code>
+</h2>
+<div class="doc doc-contents">
+<p>Storage class for the lattice vectors of a crystal i.e. its unit cell.</p>
+<p><strong>Attributes:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>direct</code></td>
+<td><code>np.ndarray</code></td>
+<td>
+<p>the direct matrix of this unit cell
+i.e. the lattice vectors</p>
+</td>
+</tr>
+<tr>
+<td><code>reciprocal_lattice</code></td>
+<td><code>np.ndarray</code></td>
+<td>
+<p>the reciprocal matrix of
+this unit cell i.e. the reciprocal lattice vectors</p>
+</td>
+</tr>
+<tr>
+<td><code>inverse</code></td>
+<td><code>np.ndarray</code></td>
+<td>
+<p>the inverse matrix of this unit
+cell i.e. the transpose of <code>reciprocal_lattice</code></p>
+</td>
+</tr>
+<tr>
+<td><code>lattice</code></td>
+<td><code>np.ndarray</code></td>
+<td>
+<p>an alias for <code>direct</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="doc doc-children">
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.a">
+<code class="highlight">
+a: <span class="nb">float</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Length of lattice vector a</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.a_star">
+<code class="highlight">
+a_star: <span class="nb">float</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>length of reciprocal lattice vector a*</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.abc_different">
+<code class="highlight">
+abc_different: <span class="nb">bool</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>are all of the lengths a, b, c different?</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.abc_equal">
+<code class="highlight">
+abc_equal: <span class="nb">bool</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>are the lengths a, b, c all equal?</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.alpha">
+<code class="highlight">
+alpha: <span class="nb">float</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Angle between lattice vectors b and c</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.alpha_deg">
+<code class="highlight">
+alpha_deg: <span class="nb">float</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Angle between lattice vectors b and c in degrees</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.alpha_star">
+<code class="highlight">
+alpha_star: <span class="nb">float</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Angle between reciprocal lattice vectors b<em> and c</em></p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.angles_different">
+<code class="highlight">
+angles_different: <span class="nb">bool</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>are all of the angles alpha, beta, gamma different?</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.b">
+<code class="highlight">
+b: <span class="nb">float</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Length of lattice vector b</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.b_star">
+<code class="highlight">
+b_star: <span class="nb">float</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>length of reciprocal lattice vector b*</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.beta">
+<code class="highlight">
+beta: <span class="nb">float</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Angle between lattice vectors a and c</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.beta_deg">
+<code class="highlight">
+beta_deg: <span class="nb">float</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Angle between lattice vectors a and c in degrees</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.beta_star">
+<code class="highlight">
+beta_star: <span class="nb">float</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Angle between reciprocal lattice vectors a<em> and c</em></p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.c">
+<code class="highlight">
+c: <span class="nb">float</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Length of lattice vector c</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.c_star">
+<code class="highlight">
+c_star: <span class="nb">float</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>length of reciprocal lattice vector c*</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.direct_homogeneous">
+<code class="highlight">
+direct_homogeneous: <span class="n">ndarray</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>The direct matrix in homogeneous coordinates</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.gamma">
+<code class="highlight">
+gamma: <span class="nb">float</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Angle between lattice vectors a and b</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.gamma_deg">
+<code class="highlight">
+gamma_deg: <span class="nb">float</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Angle between lattice vectors a and b in degrees</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.gamma_star">
+<code class="highlight">
+gamma_star: <span class="nb">float</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Angle between reciprocal lattice vectors a<em> and c</em></p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.is_cubic">
+<code class="highlight">
+is_cubic: <span class="nb">bool</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Returns true if all lengths are equal and all angles are 90 degrees</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.is_hexagonal">
+<code class="highlight">
+is_hexagonal: <span class="nb">bool</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Returns true if lengths a == b, a != c, alpha and beta == 90 and gamma == 120</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.is_monoclinic">
+<code class="highlight">
+is_monoclinic: <span class="nb">bool</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Returns true if angles alpha and gamma are equal</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.is_orthorhombic">
+<code class="highlight">
+is_orthorhombic: <span class="nb">bool</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Returns true if all angles are 90 degrees</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.is_rhombohedral">
+<code class="highlight">
+is_rhombohedral: <span class="nb">bool</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Returns true if all lengths are equal and all angles are equal</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.is_tetragonal">
+<code class="highlight">
+is_tetragonal: <span class="nb">bool</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Returns true if a, b are equal and all angles are 90 degrees</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.is_triclinic">
+<code class="highlight">
+is_triclinic: <span class="nb">bool</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Returns true if and lengths are different</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.lattice">
+<code class="highlight">
+lattice: <span class="n">ndarray</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>The direct matrix of this unit cell i.e. vectors of the lattice</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.orthogonal">
+<code class="highlight">
+orthogonal: <span class="nb">bool</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>returns true if the lattice vectors are orthogonal</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.parameters">
+<code class="highlight">
+parameters: <span class="n">ndarray</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>single vector of lattice side lengths and angles in degrees</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.reciprocal_lattice">
+<code class="highlight">
+reciprocal_lattice: <span class="n">ndarray</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>The reciprocal matrix of this unit cell i.e. vectors of the reciprocal lattice</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.v_a">
+<code class="highlight">
+v_a: <span class="n">ndarray</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>lattice vector a</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.v_a_star">
+<code class="highlight">
+v_a_star: <span class="n">ndarray</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>reciprocal lattice vector a*</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.v_b">
+<code class="highlight">
+v_b: <span class="n">ndarray</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>lattice vector a</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.v_b_star">
+<code class="highlight">
+v_b_star: <span class="n">ndarray</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>reciprocal lattice vector b*</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.v_c">
+<code class="highlight">
+v_c: <span class="n">ndarray</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>lattice vector a</p>
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.v_c_star">
+<code class="highlight">
+v_c_star: <span class="n">ndarray</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>reciprocal lattice vector c*</p>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.__init__">
+<code class="highlight language-python">
+__init__<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vectors</span><span class="p">)</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-special"><code>special</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Create a UnitCell object from a list of lattice vectors or
+a row major direct matrix. Unless otherwise specified, length
+units are Angstroms, and angular units are radians.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>vectors</code></td>
+<td><code>array_like</code></td>
+<td>
+<p>(3, 3) array of lattice vectors, row major i.e. vectors[0, :] is
+lattice vector A etc.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>chmpy/crystal/unit_cell.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vectors</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    Create a UnitCell object from a list of lattice vectors or</span>
+<span class="sd">    a row major direct matrix. Unless otherwise specified, length</span>
+<span class="sd">    units are Angstroms, and angular units are radians.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        vectors (array_like): (3, 3) array of lattice vectors, row major i.e. vectors[0, :] is</span>
+<span class="sd">            lattice vector A etc.</span>
+<span class="sd">    """</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">set_vectors</span><span class="p">(</span><span class="n">vectors</span><span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.cubic">
+<code class="highlight language-python">
+cubic<span class="p">(</span><span class="n">length</span><span class="p">)</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-classmethod"><code>classmethod</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Construct a new cubic UnitCell from the provided side length.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>length</code></td>
+<td><code>float</code></td>
+<td>
+<p>Lattice side length a in Angstroms.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>UnitCell</code></td>
+<td>
+<p>A new unit cell object representing the provided lattice.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>chmpy/crystal/unit_cell.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="nd">@classmethod</span>
+<span class="k">def</span> <span class="nf">cubic</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">length</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    Construct a new cubic UnitCell from the provided side length.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        length (float): Lattice side length a in Angstroms.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        UnitCell: A new unit cell object representing the provided lattice.</span>
+<span class="sd">    """</span>
+    <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="n">length</span><span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.from_lengths_and_angles">
+<code class="highlight language-python">
+from_lengths_and_angles<span class="p">(</span><span class="n">lengths</span><span class="p">,</span> <span class="n">angles</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">'radians'</span><span class="p">)</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-classmethod"><code>classmethod</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Construct a new UnitCell from the provided lengths and angles.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lengths</code></td>
+<td><code>array_like</code></td>
+<td>
+<p>Lattice side lengths (a, b, c) in Angstroms.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>angles</code></td>
+<td><code>array_like</code></td>
+<td>
+<p>Lattice angles (alpha, beta, gamma) in provided units (default radians)</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>unit</code></td>
+<td><code>str</code></td>
+<td>
+<p>Unit for angles i.e. 'radians' or 'degrees' (default radians).</p>
+</td>
+<td><code>'radians'</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>UnitCell</code></td>
+<td>
+<p>A new unit cell object representing the provided lattice.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>chmpy/crystal/unit_cell.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="nd">@classmethod</span>
+<span class="k">def</span> <span class="nf">from_lengths_and_angles</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">lengths</span><span class="p">,</span> <span class="n">angles</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s2">"radians"</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    Construct a new UnitCell from the provided lengths and angles.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        lengths (array_like): Lattice side lengths (a, b, c) in Angstroms.</span>
+<span class="sd">        angles (array_like): Lattice angles (alpha, beta, gamma) in provided units (default radians)</span>
+<span class="sd">        unit (str, optional): Unit for angles i.e. 'radians' or 'degrees' (default radians).</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        UnitCell: A new unit cell object representing the provided lattice.</span>
+<span class="sd">    """</span>
+    <span class="n">uc</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">unit</span> <span class="o">==</span> <span class="s2">"radians"</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">angles</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">):</span>
+            <span class="n">LOG</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                <span class="s2">"Large angle in UnitCell.from_lengths_and_angles, "</span>
+                <span class="s2">"are you sure your angles are not in degrees?"</span>
+            <span class="p">)</span>
+        <span class="n">uc</span><span class="o">.</span><span class="n">set_lengths_and_angles</span><span class="p">(</span><span class="n">lengths</span><span class="p">,</span> <span class="n">angles</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">uc</span><span class="o">.</span><span class="n">set_lengths_and_angles</span><span class="p">(</span><span class="n">lengths</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">angles</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">uc</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.from_unique_parameters">
+<code class="highlight language-python">
+from_unique_parameters<span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">cell_type</span><span class="o">=</span><span class="s1">'triclinic'</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-classmethod"><code>classmethod</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Construct a new unit cell from the unique parameters and
+the specified cell type.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>params</code></td>
+<td><code>Tuple</code></td>
+<td>
+<p>tuple of floats of unique parameters</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>cell_type</code></td>
+<td><code>str</code></td>
+<td>
+<p>the desired cell type</p>
+</td>
+<td><code>'triclinic'</code></td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>chmpy/crystal/unit_cell.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="nd">@classmethod</span>
+<span class="k">def</span> <span class="nf">from_unique_parameters</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">cell_type</span><span class="o">=</span><span class="s2">"triclinic"</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    Construct a new unit cell from the unique parameters and</span>
+<span class="sd">    the specified cell type.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        params (Tuple): tuple of floats of unique parameters</span>
+<span class="sd">        cell_type (str, optional): the desired cell type</span>
+<span class="sd">    """</span>
+    <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">cell_type</span><span class="p">)(</span><span class="o">*</span><span class="n">params</span><span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.hexagonal">
+<code class="highlight language-python">
+hexagonal<span class="p">(</span><span class="o">*</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-classmethod"><code>classmethod</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Construct a new UnitCell from the provided side lengths and angles.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>params</code></td>
+<td><code>array_like</code></td>
+<td>
+<p>Lattice side lengths (a, c)</p>
+</td>
+<td><code>()</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>UnitCell</code></td>
+<td>
+<p>A new unit cell object representing the provided lattice.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>chmpy/crystal/unit_cell.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="nd">@classmethod</span>
+<span class="k">def</span> <span class="nf">hexagonal</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    Construct a new UnitCell from the provided side lengths and angles.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        params (array_like): Lattice side lengths (a, c)</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        UnitCell: A new unit cell object representing the provided lattice.</span>
+<span class="sd">    """</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">params</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">"Requre 2 lengths for Hexagonal cell"</span>
+    <span class="n">unit</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">"unit"</span><span class="p">,</span> <span class="s2">"radians"</span><span class="p">)</span>
+    <span class="n">unit</span> <span class="o">=</span> <span class="s2">"radians"</span>
+    <span class="n">angles</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">3</span><span class="p">]</span>
+    <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">from_lengths_and_angles</span><span class="p">(</span>
+        <span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">params</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">params</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">angles</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">unit</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+    <span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.monoclinic">
+<code class="highlight language-python">
+monoclinic<span class="p">(</span><span class="o">*</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-classmethod"><code>classmethod</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Construct a new UnitCell from the provided side lengths and angle.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>params</code></td>
+<td><code>array_like</code></td>
+<td>
+<p>Lattice side lengths and angles (a, b, c, beta)</p>
+</td>
+<td><code>()</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>UnitCell</code></td>
+<td>
+<p>A new unit cell object representing the provided lattice.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>chmpy/crystal/unit_cell.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="nd">@classmethod</span>
+<span class="k">def</span> <span class="nf">monoclinic</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    Construct a new UnitCell from the provided side lengths and angle.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        params (array_like): Lattice side lengths and angles (a, b, c, beta)</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        UnitCell: A new unit cell object representing the provided lattice.</span>
+<span class="sd">    """</span>
+
+    <span class="k">assert</span> <span class="p">(</span>
+        <span class="nb">len</span><span class="p">(</span><span class="n">params</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span>
+    <span class="p">),</span> <span class="s2">"Requre three lengths and one angle for Monoclinic cell"</span>
+    <span class="n">unit</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"unit"</span><span class="p">,</span> <span class="s2">"radians"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">unit</span> <span class="o">!=</span> <span class="s2">"radians"</span><span class="p">:</span>
+        <span class="n">alpha</span><span class="p">,</span> <span class="n">gamma</span> <span class="o">=</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">90</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">alpha</span><span class="p">,</span> <span class="n">gamma</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">from_lengths_and_angles</span><span class="p">(</span>
+        <span class="n">params</span><span class="p">[:</span><span class="mi">3</span><span class="p">],</span> <span class="p">(</span><span class="n">alpha</span><span class="p">,</span> <span class="n">params</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">gamma</span><span class="p">),</span> <span class="o">**</span><span class="n">kwargs</span>
+    <span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.orthorhombic">
+<code class="highlight language-python">
+orthorhombic<span class="p">(</span><span class="o">*</span><span class="n">lengths</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-classmethod"><code>classmethod</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Construct a new orthorhombic UnitCell from the provided side lengths.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lengths</code></td>
+<td><code>array_like</code></td>
+<td>
+<p>Lattice side lengths (a, b, c) in Angstroms.</p>
+</td>
+<td><code>()</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>UnitCell</code></td>
+<td>
+<p>A new unit cell object representing the provided lattice.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>chmpy/crystal/unit_cell.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="nd">@classmethod</span>
+<span class="k">def</span> <span class="nf">orthorhombic</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">lengths</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    Construct a new orthorhombic UnitCell from the provided side lengths.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        lengths (array_like): Lattice side lengths (a, b, c) in Angstroms.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        UnitCell: A new unit cell object representing the provided lattice.</span>
+<span class="sd">    """</span>
+
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">lengths</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">"Requre three lengths for Orthorhombic cell"</span>
+    <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">lengths</span><span class="p">))</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.rhombohedral">
+<code class="highlight language-python">
+rhombohedral<span class="p">(</span><span class="o">*</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-classmethod"><code>classmethod</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Construct a new UnitCell from the provided side lengths and angles.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>params</code></td>
+<td><code>array_like</code></td>
+<td>
+<p>Lattice side length a and angle alpha c</p>
+</td>
+<td><code>()</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>UnitCell</code></td>
+<td>
+<p>A new unit cell object representing the provided lattice.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>chmpy/crystal/unit_cell.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="nd">@classmethod</span>
+<span class="k">def</span> <span class="nf">rhombohedral</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    Construct a new UnitCell from the provided side lengths and angles.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        params (array_like): Lattice side length a and angle alpha c</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        UnitCell: A new unit cell object representing the provided lattice.</span>
+<span class="sd">    """</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">params</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">"Requre 1 length and 1 angle for Rhombohedral cell"</span>
+    <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">from_lengths_and_angles</span><span class="p">([</span><span class="n">params</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="n">params</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.set_lengths_and_angles">
+<code class="highlight language-python">
+set_lengths_and_angles<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lengths</span><span class="p">,</span> <span class="n">angles</span><span class="p">)</span> </code>
+</h3>
+<div class="doc doc-contents">
+<p>Modify this unit cell by setting the lattice vectors
+according to lengths a, b, c and angles alpha, beta, gamma of
+a parallelipiped.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lengths</code></td>
+<td><code>array_like</code></td>
+<td>
+<p>array of (a, b, c), the unit cell side lengths in Angstroms.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>angles</code></td>
+<td><code>array_like</code></td>
+<td>
+<p>array of (alpha, beta, gamma), the unit cell angles lengths
+in radians.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>chmpy/crystal/unit_cell.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span> 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">set_lengths_and_angles</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lengths</span><span class="p">,</span> <span class="n">angles</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    Modify this unit cell by setting the lattice vectors</span>
+<span class="sd">    according to lengths a, b, c and angles alpha, beta, gamma of</span>
+<span class="sd">    a parallelipiped.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        lengths (array_like): array of (a, b, c), the unit cell side lengths in Angstroms.</span>
+<span class="sd">        angles (array_like): array of (alpha, beta, gamma), the unit cell angles lengths</span>
+<span class="sd">            in radians.</span>
+<span class="sd">    """</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">lengths</span> <span class="o">=</span> <span class="n">lengths</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">angles</span> <span class="o">=</span> <span class="n">angles</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lengths</span>
+    <span class="n">ca</span><span class="p">,</span> <span class="n">cb</span><span class="p">,</span> <span class="n">cg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">angles</span><span class="p">)</span>
+    <span class="n">sg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">angles</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">volume</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">direct</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span>
+        <span class="p">[</span>
+            <span class="p">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">*</span> <span class="n">cg</span><span class="p">,</span> <span class="n">c</span> <span class="o">*</span> <span class="n">cb</span><span class="p">],</span>
+            <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">b</span> <span class="o">*</span> <span class="n">sg</span><span class="p">,</span> <span class="n">c</span> <span class="o">*</span> <span class="p">(</span><span class="n">ca</span> <span class="o">-</span> <span class="n">cb</span> <span class="o">*</span> <span class="n">cg</span><span class="p">)</span> <span class="o">/</span> <span class="n">sg</span><span class="p">],</span>
+            <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">v</span> <span class="o">/</span> <span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">b</span> <span class="o">*</span> <span class="n">sg</span><span class="p">)],</span>
+        <span class="p">]</span>
+    <span class="p">)</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="mi">1</span> <span class="o">/</span> <span class="n">a</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+        <span class="p">[</span><span class="o">-</span><span class="n">cg</span> <span class="o">/</span> <span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">sg</span><span class="p">),</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">b</span> <span class="o">*</span> <span class="n">sg</span><span class="p">),</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="p">[</span>
+            <span class="n">b</span> <span class="o">*</span> <span class="n">c</span> <span class="o">*</span> <span class="p">(</span><span class="n">ca</span> <span class="o">*</span> <span class="n">cg</span> <span class="o">-</span> <span class="n">cb</span><span class="p">)</span> <span class="o">/</span> <span class="n">v</span> <span class="o">/</span> <span class="n">sg</span><span class="p">,</span>
+            <span class="n">a</span> <span class="o">*</span> <span class="n">c</span> <span class="o">*</span> <span class="p">(</span><span class="n">cb</span> <span class="o">*</span> <span class="n">cg</span> <span class="o">-</span> <span class="n">ca</span><span class="p">)</span> <span class="o">/</span> <span class="n">v</span> <span class="o">/</span> <span class="n">sg</span><span class="p">,</span>
+            <span class="n">a</span> <span class="o">*</span> <span class="n">b</span> <span class="o">*</span> <span class="n">sg</span> <span class="o">/</span> <span class="n">v</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">inverse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_set_cell_type</span><span class="p">()</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.set_vectors">
+<code class="highlight language-python">
+set_vectors<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vectors</span><span class="p">)</span> </code>
+</h3>
+<div class="doc doc-contents">
+<p>Modify this unit cell by setting the lattice vectors
+according to those provided. This is performed by setting the
+lattice parameters (lengths and angles) based on the provided vectors,
+such that it results in a consistent basis without directly
+matrix inverse (and typically losing precision), and
+as the SHELX file/CIF output will be relying on these
+lengths/angles anyway, it is important to have these consistent.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>vectors</code></td>
+<td><code>array_like</code></td>
+<td>
+<p>(3, 3) array of lattice vectors, row major i.e. vectors[0, :] is
+lattice vector A etc.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>chmpy/crystal/unit_cell.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">set_vectors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vectors</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    Modify this unit cell by setting the lattice vectors</span>
+<span class="sd">    according to those provided. This is performed by setting the</span>
+<span class="sd">    lattice parameters (lengths and angles) based on the provided vectors,</span>
+<span class="sd">    such that it results in a consistent basis without directly</span>
+<span class="sd">    matrix inverse (and typically losing precision), and</span>
+<span class="sd">    as the SHELX file/CIF output will be relying on these</span>
+<span class="sd">    lengths/angles anyway, it is important to have these consistent.</span>
+
+
+<span class="sd">    Args:</span>
+<span class="sd">        vectors (array_like): (3, 3) array of lattice vectors, row major i.e. vectors[0, :] is</span>
+<span class="sd">            lattice vector A etc.</span>
+<span class="sd">    """</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">direct</span> <span class="o">=</span> <span class="n">vectors</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">direct</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">u_a</span> <span class="o">=</span> <span class="n">vectors</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">/</span> <span class="n">a</span>
+    <span class="n">u_b</span> <span class="o">=</span> <span class="n">vectors</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">/</span> <span class="n">b</span>
+    <span class="n">u_c</span> <span class="o">=</span> <span class="n">vectors</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="p">:]</span> <span class="o">/</span> <span class="n">c</span>
+    <span class="n">alpha</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">vdot</span><span class="p">(</span><span class="n">u_b</span><span class="p">,</span> <span class="n">u_c</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="n">beta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">vdot</span><span class="p">(</span><span class="n">u_c</span><span class="p">,</span> <span class="n">u_a</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="n">gamma</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">vdot</span><span class="p">(</span><span class="n">u_a</span><span class="p">,</span> <span class="n">u_b</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="n">params</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">degrees</span><span class="p">([</span><span class="n">alpha</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">gamma</span><span class="p">])</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">lengths</span> <span class="o">=</span> <span class="p">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">angles</span> <span class="o">=</span> <span class="p">[</span><span class="n">alpha</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">gamma</span><span class="p">]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">inverse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">direct</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_set_cell_type</span><span class="p">()</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.tetragonal">
+<code class="highlight language-python">
+tetragonal<span class="p">(</span><span class="o">*</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-classmethod"><code>classmethod</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Construct a new UnitCell from the provided side lengths and angles.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>params</code></td>
+<td><code>array_like</code></td>
+<td>
+<p>Lattice side lengths (a, c)</p>
+</td>
+<td><code>()</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>UnitCell</code></td>
+<td>
+<p>A new unit cell object representing the provided lattice.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>chmpy/crystal/unit_cell.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="nd">@classmethod</span>
+<span class="k">def</span> <span class="nf">tetragonal</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    Construct a new UnitCell from the provided side lengths and angles.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        params (array_like): Lattice side lengths (a, c)</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        UnitCell: A new unit cell object representing the provided lattice.</span>
+<span class="sd">    """</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">params</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">"Requre 2 lengths for Tetragonal cell"</span>
+    <span class="n">unit</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"unit"</span><span class="p">,</span> <span class="s2">"radians"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">unit</span> <span class="o">!=</span> <span class="s2">"radians"</span><span class="p">:</span>
+        <span class="n">angles</span> <span class="o">=</span> <span class="p">[</span><span class="mi">90</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">angles</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span>
+    <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">from_lengths_and_angles</span><span class="p">(</span>
+        <span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">params</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">params</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">angles</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+    <span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.to_cartesian">
+<code class="highlight language-python">
+to_cartesian<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coords</span><span class="p">)</span> </code>
+</h3>
+<div class="doc doc-contents">
+<p>Transform coordinates from fractional space (a, b, c)
+to Cartesian space (x, y, z). The x-direction will be aligned
+along lattice vector A.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>coords</code></td>
+<td><code>ndarray</code></td>
+<td>
+<p>(N, 3) array of fractional coordinates</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ndarray</code></td>
+<td>
+<p>np.ndarray: (N, 3) array of Cartesian coordinates</p>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>chmpy/crystal/unit_cell.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">to_cartesian</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coords</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+    <span class="sd">"""</span>
+<span class="sd">    Transform coordinates from fractional space (a, b, c)</span>
+<span class="sd">    to Cartesian space (x, y, z). The x-direction will be aligned</span>
+<span class="sd">    along lattice vector A.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        coords (array_like): (N, 3) array of fractional coordinates</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        np.ndarray: (N, 3) array of Cartesian coordinates</span>
+<span class="sd">    """</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">direct</span><span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.to_fractional">
+<code class="highlight language-python">
+to_fractional<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coords</span><span class="p">)</span> </code>
+</h3>
+<div class="doc doc-contents">
+<p>Transform coordinates from Cartesian space (x, y, z)
+to fractional space (a, b, c). The x-direction will is assumed
+be aligned along lattice vector A.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>coords</code></td>
+<td><code>ndarray</code></td>
+<td>
+<p>an (N, 3) array of Cartesian coordinates</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ndarray</code></td>
+<td>
+<p>np.ndarray: (N, 3) array of fractional coordinates</p>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>chmpy/crystal/unit_cell.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">to_fractional</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coords</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+    <span class="sd">"""</span>
+<span class="sd">    Transform coordinates from Cartesian space (x, y, z)</span>
+<span class="sd">    to fractional space (a, b, c). The x-direction will is assumed</span>
+<span class="sd">    be aligned along lattice vector A.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        coords (array_like): an (N, 3) array of Cartesian coordinates</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        np.ndarray: (N, 3) array of fractional coordinates</span>
+<span class="sd">    """</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">inverse</span><span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.triclinic">
+<code class="highlight language-python">
+triclinic<span class="p">(</span><span class="o">*</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-classmethod"><code>classmethod</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p>Construct a new UnitCell from the provided side lengths and angles.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>params</code></td>
+<td><code>array_like</code></td>
+<td>
+<p>Lattice side lengths and angles (a, b, c, alpha, beta, gamma)</p>
+</td>
+<td><code>()</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>UnitCell</code></td>
+<td>
+<p>A new unit cell object representing the provided lattice.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>chmpy/crystal/unit_cell.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="nd">@classmethod</span>
+<span class="k">def</span> <span class="nf">triclinic</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    Construct a new UnitCell from the provided side lengths and angles.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        params (array_like): Lattice side lengths and angles (a, b, c, alpha, beta, gamma)</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        UnitCell: A new unit cell object representing the provided lattice.</span>
+<span class="sd">    """</span>
+
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">params</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span><span class="p">,</span> <span class="s2">"Requre three lengths and angles for Triclinic cell"</span>
+    <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">from_lengths_and_angles</span><span class="p">(</span><span class="n">params</span><span class="p">[:</span><span class="mi">3</span><span class="p">],</span> <span class="n">params</span><span class="p">[</span><span class="mi">3</span><span class="p">:],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="chmpy.crystal.unit_cell.UnitCell.volume">
+<code class="highlight language-python">
+volume<span class="p">(</span><span class="bp">self</span><span class="p">)</span> </code>
+</h3>
+<div class="doc doc-contents">
+<p>The volume of the unit cell, in cubic Angstroms</p>
+<details class="quote">
+<summary>Source code in <code>chmpy/crystal/unit_cell.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>196
+197
+198
+199
+200</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">volume</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="sd">"""The volume of the unit cell, in cubic Angstroms"""</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lengths</span>
+    <span class="n">ca</span><span class="p">,</span> <span class="n">cb</span><span class="p">,</span> <span class="n">cg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">angles</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span> <span class="o">*</span> <span class="n">c</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">ca</span> <span class="o">*</span> <span class="n">ca</span> <span class="o">-</span> <span class="n">cb</span> <span class="o">*</span> <span class="n">cb</span> <span class="o">-</span> <span class="n">cg</span> <span class="o">*</span> <span class="n">cg</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">ca</span> <span class="o">*</span> <span class="n">cb</span> <span class="o">*</span> <span class="n">cg</span><span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav aria-label="Footer" class="md-footer-nav__inner md-grid">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../symmetry_operation/" rel="prev" title="symmetry_operation">
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                symmetry_operation
+              </div>
+</div>
+</a>
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../../ext/charges/" rel="next" title="chmpy.ext.charges">
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                  Next
+                </span>
+                chmpy.ext.charges
+              </div>
+</div>
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../../../assets/javascripts/vendor.d710d30a.min.js"></script>
+<script src="../../../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+<script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.a68abb33.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+</body>
+</html>

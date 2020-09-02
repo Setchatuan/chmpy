@@ -1,0 +1,1169 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://peterspackman.github.io/chmpy/API/util/num/" rel="canonical"/>
+<link href="../../../assets/images/favicon.png" rel="shortcut icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-5.4.0" name="generator"/>
+<title>chmpy.util.num - chmpy</title>
+<link href="../../../assets/stylesheets/main.fe0cca5b.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#chmpy.util.num">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header-nav md-grid">
+<a aria-label="chmpy" class="md-header-nav__button md-logo" href="https://peterspackman.github.io/chmpy/" title="chmpy">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
+</a>
+<label class="md-header-nav__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header-nav__title" data-md-component="header-title">
+<div class="md-header-nav__ellipsis">
+<span class="md-header-nav__topic md-ellipsis">
+            chmpy
+          </span>
+<span class="md-header-nav__topic md-ellipsis">
+            
+              chmpy.util.num
+            
+          </span>
+</div>
+</div>
+<label class="md-header-nav__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" data-md-component="search-reset" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="chmpy" class="md-nav__button md-logo" href="https://peterspackman.github.io/chmpy/" title="chmpy">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
+</a>
+    chmpy
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../.." title="chmpy">
+      chmpy
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../parallel/" title="Parallelization">
+      Parallelization
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../shape_descriptors/" title="Shape descriptors">
+      Shape descriptors
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
+      API
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="API" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        API
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../sampling/" title="Sampling">
+      Sampling
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../shape_descriptors/" title="Shape descriptors">
+      Shape descriptors
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" id="nav-4-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-3">
+      Core
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Core" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-3">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Core
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../core/element/" title="element">
+      element
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../core/molecule/" title="molecule">
+      molecule
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" id="nav-4-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-4">
+      Crystal
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Crystal" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-4">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Crystal
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../crystal/asymmetric_unit/" title="asymmetric_unit">
+      asymmetric_unit
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../crystal/crystal/" title="crystal">
+      crystal
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../crystal/space_group/" title="space_group">
+      space_group
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../crystal/symmetry_operation/" title="symmetry_operation">
+      symmetry_operation
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../crystal/unit_cell/" title="unit_cell">
+      unit_cell
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-5" id="nav-4-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-5">
+      Ext
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Ext" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-5">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Ext
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ext/charges/" title="chmpy.ext.charges">
+      chmpy.ext.charges
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ext/elastic_tensor/" title="chmpy.ext.elastic_tensor">
+      chmpy.ext.elastic_tensor
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6" id="nav-4-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-6">
+      Util
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Util" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-6">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Util
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../color/" title="chmpy.util.color">
+      chmpy.util.color
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dict/" title="chmpy.util.dict">
+      chmpy.util.dict
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../mesh/" title="chmpy.util.mesh">
+      chmpy.util.mesh
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        chmpy.util.num
+        <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"></path></svg>
+</span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./" title="chmpy.util.num">
+      chmpy.util.num
+    </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.util.num">
+    chmpy.util.num
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.util.num.cartesian_product">
+    cartesian_product()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.util.num.is_perfect_square">
+    is_perfect_square()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.util.num.kabsch_rotation_matrix">
+    kabsch_rotation_matrix()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.util.num.reorient_points">
+    reorient_points()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.util.num.rmsd_points">
+    rmsd_points()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.util.num.spherical_to_cartesian">
+    spherical_to_cartesian()
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../text/" title="chmpy.util.text">
+      chmpy.util.text
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.util.num">
+    chmpy.util.num
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.util.num.cartesian_product">
+    cartesian_product()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.util.num.is_perfect_square">
+    is_perfect_square()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.util.num.kabsch_rotation_matrix">
+    kabsch_rotation_matrix()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.util.num.reorient_points">
+    reorient_points()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.util.num.rmsd_points">
+    rmsd_points()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.util.num.spherical_to_cartesian">
+    spherical_to_cartesian()
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<h1>chmpy.util.num</h1>
+<div class="doc doc-object doc-module">
+<h2 class="hidden-toc" href="#chmpy.util.num" id="chmpy.util.num" style="visibility: hidden; width: 0; height: 0;">
+</h2>
+<div class="doc doc-contents first">
+<div class="doc doc-children">
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="chmpy.util.num.cartesian_product">
+<code class="highlight language-python">
+cartesian_product<span class="p">(</span><span class="o">*</span><span class="n">arrays</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Efficiently calculate the Cartesian product of the
+provided vectors A x B x C ... etc. This will maintain
+order in loops from the right most array.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>*arrays</code></td>
+<td><code>array_like</code></td>
+<td>
+<p>1D arrays to use for the Cartesian product</p>
+</td>
+<td><code>()</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ndarray</code></td>
+<td>
+<p>np.ndarray: The Cartesian product of the provided vectors.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>chmpy/util/num.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">cartesian_product</span><span class="p">(</span><span class="o">*</span><span class="n">arrays</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+    <span class="sd">"""</span>
+<span class="sd">    Efficiently calculate the Cartesian product of the</span>
+<span class="sd">    provided vectors A x B x C ... etc. This will maintain</span>
+<span class="sd">    order in loops from the right most array.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        *arrays (array_like): 1D arrays to use for the Cartesian product</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        np.ndarray: The Cartesian product of the provided vectors.</span>
+<span class="sd">    """</span>
+    <span class="n">arrays</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">arrays</span><span class="p">]</span>
+    <span class="n">la</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arrays</span><span class="p">)</span>
+    <span class="n">dtype</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">result_type</span><span class="p">(</span><span class="o">*</span><span class="n">arrays</span><span class="p">)</span>
+    <span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">([</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">arrays</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">la</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ix_</span><span class="p">(</span><span class="o">*</span><span class="n">arrays</span><span class="p">)):</span>
+        <span class="n">arr</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span>
+    <span class="k">return</span> <span class="n">arr</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">la</span><span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="chmpy.util.num.is_perfect_square">
+<code class="highlight language-python">
+is_perfect_square<span class="p">(</span><span class="n">value</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Check if a number is perfect square.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>value</code></td>
+<td><code>Number</code></td>
+<td>
+<p>the number in question</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bool</code></td>
+<td>
+<p>bool: <code>True</code> if the number is a perfect square, otherwise <code>False</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>chmpy/util/num.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span> 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">is_perfect_square</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">Number</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="sd">"""</span>
+<span class="sd">    Check if a number is perfect square.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        value (Number): the number in question</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        bool: `True` if the number is a perfect square, otherwise `False`</span>
+<span class="sd">    """</span>
+    <span class="kn">import</span> <span class="nn">math</span>
+
+    <span class="n">root</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">root</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">==</span> <span class="n">value</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="chmpy.util.num.kabsch_rotation_matrix">
+<code class="highlight language-python">
+kabsch_rotation_matrix<span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Calculate the optimal rotation matrix <code>R</code> to rotate
+<code>A</code> onto <code>B</code>, minimising root-mean-square deviation so that
+this may be then calculated.</p>
+<p>See: https://en.wikipedia.org/wiki/Kabsch_algorithm</p>
+<p>Reference:</p>
+<div class="codehilite">
+<pre><span></span><code><span class="err">Kabsch, W. Acta Cryst. A, 32, 922-923, (1976)</span>
+<span class="c">DOI: http://dx.doi.org/10.1107/S0567739476001873</span>
+</code></pre>
+</div>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>A</code></td>
+<td><code>np.ndarray</code></td>
+<td>
+<p>(N,D) matrix where N is the number of vectors and D
+is the dimension of each vector</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>B</code></td>
+<td><code>np.ndarray</code></td>
+<td>
+<p>(N,D) matrix where N is the number of
+vectors and D is the dimension of each vector</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code></code></td>
+<td>
+<p>np.ndarray (D,D) rotation matrix where D is the dimension of each vector</p>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>chmpy/util/num.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">kabsch_rotation_matrix</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    Calculate the optimal rotation matrix `R` to rotate</span>
+<span class="sd">    `A` onto `B`, minimising root-mean-square deviation so that</span>
+<span class="sd">    this may be then calculated.</span>
+
+<span class="sd">    See: https://en.wikipedia.org/wiki/Kabsch_algorithm</span>
+
+<span class="sd">    Reference:</span>
+<span class="sd">    ```</span>
+<span class="sd">    Kabsch, W. Acta Cryst. A, 32, 922-923, (1976)</span>
+<span class="sd">    DOI: http://dx.doi.org/10.1107/S0567739476001873</span>
+<span class="sd">    ```</span>
+<span class="sd">    Args:</span>
+<span class="sd">        A (np.ndarray): (N,D) matrix where N is the number of vectors and D</span>
+<span class="sd">            is the dimension of each vector</span>
+<span class="sd">        B (np.ndarray): (N,D) matrix where N is the number of</span>
+<span class="sd">            vectors and D is the dimension of each vector</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        np.ndarray (D,D) rotation matrix where D is the dimension of each vector</span>
+<span class="sd">    """</span>
+
+    <span class="c1"># Calculate the covariance matrix</span>
+    <span class="n">cov</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">A</span><span class="p">),</span> <span class="n">B</span><span class="p">)</span>
+
+    <span class="c1"># Use singular value decomposition to calculate</span>
+    <span class="c1"># the optimal rotation matrix</span>
+    <span class="n">v</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">svd</span><span class="p">(</span><span class="n">cov</span><span class="p">)</span>
+
+    <span class="c1"># check the determinant to ensure a right-handed</span>
+    <span class="c1"># coordinate system</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">w</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mf">0.0</span><span class="p">:</span>
+        <span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">v</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">v</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">R</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">R</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="chmpy.util.num.reorient_points">
+<code class="highlight language-python">
+reorient_points<span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">'kabsch'</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Rotate the points in <code>A</code> onto <code>B</code></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>A</code></td>
+<td><code>np.ndarray</code></td>
+<td>
+<p>(N,D) matrix where N is the number of vectors and D
+is the dimension of each vector</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>B</code></td>
+<td><code>np.ndarray</code></td>
+<td>
+<p>(N,D) matrix where N is the number of
+vectors and D is the dimension of each vector</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>np.ndarray</code></td>
+<td>
+<p>(N,D) matrix where N is the number of vectors and D
+    is the dimension of each vector, now rotated to align with B</p>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>chmpy/util/num.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span> 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">reorient_points</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">"kabsch"</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    Rotate the points in `A` onto `B`</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        A (np.ndarray): (N,D) matrix where N is the number of vectors and D</span>
+<span class="sd">            is the dimension of each vector</span>
+<span class="sd">        B (np.ndarray): (N,D) matrix where N is the number of</span>
+<span class="sd">            vectors and D is the dimension of each vector</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        np.ndarray: (N,D) matrix where N is the number of vectors and D</span>
+<span class="sd">            is the dimension of each vector, now rotated to align with B</span>
+<span class="sd">    """</span>
+    <span class="k">if</span> <span class="n">method</span> <span class="o">!=</span> <span class="s2">"kabsch"</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">"Only kabsch algorithm is currently implemented"</span><span class="p">)</span>
+    <span class="n">R</span> <span class="o">=</span> <span class="n">kabsch_rotation_matrix</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+    <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">R</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">A</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="chmpy.util.num.rmsd_points">
+<code class="highlight language-python">
+rmsd_points<span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">reorient</span><span class="o">=</span><span class="s1">'kabsch'</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Rotate the points in <code>A</code> onto <code>B</code> and calculate
+their RMSD</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>A</code></td>
+<td><code>np.ndarray</code></td>
+<td>
+<p>(N,D) matrix where N is the number of vectors and D
+is the dimension of each vector</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>B</code></td>
+<td><code>np.ndarray</code></td>
+<td>
+<p>(N,D) matrix where N is the number of
+vectors and D is the dimension of each vector</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>float</code></td>
+<td>
+<p>root mean squared deviation</p>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>chmpy/util/num.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">rmsd_points</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">reorient</span><span class="o">=</span><span class="s2">"kabsch"</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    Rotate the points in `A` onto `B` and calculate</span>
+<span class="sd">    their RMSD</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        A (np.ndarray): (N,D) matrix where N is the number of vectors and D</span>
+<span class="sd">            is the dimension of each vector</span>
+<span class="sd">        B (np.ndarray): (N,D) matrix where N is the number of</span>
+<span class="sd">            vectors and D is the dimension of each vector</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        float: root mean squared deviation</span>
+<span class="sd">    """</span>
+    <span class="k">if</span> <span class="n">reorient</span><span class="p">:</span>
+        <span class="n">A</span> <span class="o">=</span> <span class="n">reorient_points</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">reorient</span><span class="p">)</span>
+    <span class="n">diff</span> <span class="o">=</span> <span class="n">B</span> <span class="o">-</span> <span class="n">A</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">vdot</span><span class="p">(</span><span class="n">diff</span><span class="p">,</span> <span class="n">diff</span><span class="p">)</span> <span class="o">/</span> <span class="n">diff</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="chmpy.util.num.spherical_to_cartesian">
+<code class="highlight language-python">
+spherical_to_cartesian<span class="p">(</span><span class="n">rtp</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">numpy</span><span class="o">.</span><span class="n">float64</span><span class="s1">'&gt;)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Given an N by 3 array of (r, theta, phi) spherical coordinates
+return an N by 3 array of Cartesian(x, y, z) coordinates.</p>
+<p>Uses the following convention::</p>
+<div class="codehilite">
+<pre><span></span><code><span class="err">x = r sin(theta) cos(phi)</span>
+<span class="err">y = r sin(theta) sin(phi)</span>
+<span class="err">z = r cos(theta)</span>
+</code></pre>
+</div>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rtp</code></td>
+<td><code>ndarray</code></td>
+<td>
+<p>(N,3) array of of r, theta, phi coordinates
+in the above spherical coordinate system.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>dtype</code></td>
+<td><code></code></td>
+<td>
+<p>numpy datatype or string</p>
+</td>
+<td><code>&lt;class 'numpy.float64'&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ndarray</code></td>
+<td>
+<p>np.ndarray: (N,3) array of x,y,z Cartesian coordinates</p>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>chmpy/util/num.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">spherical_to_cartesian</span><span class="p">(</span><span class="n">rtp</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+    <span class="sd">"""</span>
+<span class="sd">    Given an N by 3 array of (r, theta, phi) spherical coordinates</span>
+<span class="sd">    return an N by 3 array of Cartesian(x, y, z) coordinates.</span>
+
+<span class="sd">    Uses the following convention::</span>
+
+<span class="sd">        x = r sin(theta) cos(phi)</span>
+<span class="sd">        y = r sin(theta) sin(phi)</span>
+<span class="sd">        z = r cos(theta)</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        rtp (array_like): (N,3) array of of r, theta, phi coordinates</span>
+<span class="sd">            in the above spherical coordinate system.</span>
+<span class="sd">        dtype: numpy datatype or string</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        np.ndarray: (N,3) array of x,y,z Cartesian coordinates</span>
+<span class="sd">    """</span>
+    <span class="n">xyz</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">rtp</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
+
+    <span class="n">xyz</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">rtp</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">rtp</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">rtp</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">])</span>
+    <span class="n">xyz</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">rtp</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">rtp</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">rtp</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">])</span>
+    <span class="n">xyz</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">rtp</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">rtp</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">xyz</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav aria-label="Footer" class="md-footer-nav__inner md-grid">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../mesh/" rel="prev" title="chmpy.util.mesh">
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                chmpy.util.mesh
+              </div>
+</div>
+</a>
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../text/" rel="next" title="chmpy.util.text">
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                  Next
+                </span>
+                chmpy.util.text
+              </div>
+</div>
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../../../assets/javascripts/vendor.d710d30a.min.js"></script>
+<script src="../../../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+<script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.a68abb33.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+</body>
+</html>
