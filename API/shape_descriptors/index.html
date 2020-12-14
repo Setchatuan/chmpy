@@ -890,9 +890,7 @@ Options include:</p>
 <tr>
 <td class="linenos">
 <div class="linenodiv">
-<pre><span></span>168
-169
-170
+<pre><span></span>170
 171
 172
 173
@@ -947,7 +945,11 @@ Options include:</p>
 222
 223
 224
-225</pre>
+225
+226
+227
+228
+229</pre>
 </div>
 </td>
 <td class="code">
@@ -985,6 +987,8 @@ Options include:</p>
     <span class="n">g</span><span class="p">[:,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">sht</span><span class="o">.</span><span class="n">grid</span><span class="p">[:,</span> <span class="p">:]</span>
     <span class="n">o</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"origin"</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">p_i</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">))</span>
     <span class="n">r</span> <span class="o">=</span> <span class="n">sphere_promolecule_radii</span><span class="p">(</span><span class="n">pro</span><span class="o">.</span><span class="n">dens</span><span class="p">,</span> <span class="n">o</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">r_min</span><span class="p">,</span> <span class="n">r_max</span><span class="p">,</span> <span class="mf">1e-7</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">isovalue</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">r</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Unable to find isovalue </span><span class="si">{</span><span class="n">isovalue</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> in all directions for bounds (</span><span class="si">{</span><span class="n">r_min</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">r_max</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">)"</span><span class="p">)</span>
     <span class="n">real</span> <span class="o">=</span> <span class="kc">True</span>
     <span class="k">if</span> <span class="n">property_function</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">property_function</span> <span class="o">==</span> <span class="s2">"d_norm"</span><span class="p">:</span>
@@ -1193,7 +1197,9 @@ Options include:</p>
 162
 163
 164
-165</pre>
+165
+166
+167</pre>
 </div>
 </td>
 <td class="code">
@@ -1238,6 +1244,8 @@ Options include:</p>
     <span class="n">g</span><span class="p">[:,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">sht</span><span class="o">.</span><span class="n">grid</span><span class="p">[:,</span> <span class="p">:]</span>
     <span class="n">o</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"origin"</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">p_i</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">))</span>
     <span class="n">r</span> <span class="o">=</span> <span class="n">sphere_stockholder_radii</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">s</span><span class="p">,</span> <span class="n">o</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">r_min</span><span class="p">,</span> <span class="n">r_max</span><span class="p">,</span> <span class="mf">1e-7</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">isovalue</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">r</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Unable to find isovalue </span><span class="si">{</span><span class="n">isovalue</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> in all directions for bounds (</span><span class="si">{</span><span class="n">r_min</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">r_max</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">)"</span><span class="p">)</span>
     <span class="n">real</span> <span class="o">=</span> <span class="kc">True</span>
     <span class="k">if</span> <span class="n">property_function</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">property_function</span> <span class="o">==</span> <span class="s2">"d_norm"</span><span class="p">:</span>

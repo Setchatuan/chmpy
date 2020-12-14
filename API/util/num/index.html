@@ -387,6 +387,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.util.num.cartesian_to_spherical">
+    cartesian_to_spherical()
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#chmpy.util.num.is_perfect_square">
     is_perfect_square()
   </a>
@@ -459,6 +464,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#chmpy.util.num.cartesian_product">
     cartesian_product()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chmpy.util.num.cartesian_to_spherical">
+    cartesian_to_spherical()
   </a>
 </li>
 <li class="md-nav__item">
@@ -597,6 +607,134 @@ order in loops from the right most array.</p>
     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ix_</span><span class="p">(</span><span class="o">*</span><span class="n">arrays</span><span class="p">)):</span>
         <span class="n">arr</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span>
     <span class="k">return</span> <span class="n">arr</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">la</span><span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="chmpy.util.num.cartesian_to_spherical">
+<code class="highlight language-python">
+cartesian_to_spherical<span class="p">(</span><span class="n">xyz</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">numpy</span><span class="o">.</span><span class="n">float64</span><span class="s1">'&gt;)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Given an N by 3 array of (x, y, z) spherical coordinates
+return an N by 3 array of Cartesian(r, theta, phi) coordinates.</p>
+<p>Uses the following convention::</p>
+<div class="codehilite">
+<pre><span></span><code><span class="err">x = r sin(theta) cos(phi)</span>
+<span class="err">y = r sin(theta) sin(phi)</span>
+<span class="err">z = r cos(theta)</span>
+</code></pre>
+</div>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rtp</code></td>
+<td><code>array_like</code></td>
+<td>
+<p>(N,3) array of of r, theta, phi coordinates
+in the above spherical coordinate system.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>dtype</code></td>
+<td><code></code></td>
+<td>
+<p>numpy datatype or string</p>
+</td>
+<td><code>&lt;class 'numpy.float64'&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ndarray</code></td>
+<td>
+<p>np.ndarray: (N,3) array of x,y,z Cartesian coordinates</p>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>chmpy/util/num.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">cartesian_to_spherical</span><span class="p">(</span><span class="n">xyz</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+    <span class="sd">"""</span>
+<span class="sd">    Given an N by 3 array of (x, y, z) spherical coordinates</span>
+<span class="sd">    return an N by 3 array of Cartesian(r, theta, phi) coordinates.</span>
+
+<span class="sd">    Uses the following convention::</span>
+
+<span class="sd">        x = r sin(theta) cos(phi)</span>
+<span class="sd">        y = r sin(theta) sin(phi)</span>
+<span class="sd">        z = r cos(theta)</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        rtp (array_like): (N,3) array of of r, theta, phi coordinates</span>
+<span class="sd">            in the above spherical coordinate system.</span>
+<span class="sd">        dtype: numpy datatype or string</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        np.ndarray: (N,3) array of x,y,z Cartesian coordinates</span>
+<span class="sd">    """</span>
+    <span class="n">rtp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">xyz</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="n">rtp</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">xyz</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">xyz</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">xyz</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">xyz</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">xyz</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="n">xyz</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]);</span>
+    <span class="n">rtp</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fmod</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">xyz</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">xyz</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+    <span class="n">rtp</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span><span class="n">xyz</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">/</span> <span class="n">rtp</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">rtp</span>
 </code></pre>
 </div>
 </td>
@@ -772,31 +910,7 @@ vectors and D is the dimension of each vector</p>
 <tr>
 <td class="linenos">
 <div class="linenodiv">
-<pre><span></span>114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
-137
-138
+<pre><span></span>138
 139
 140
 141
@@ -807,7 +921,31 @@ vectors and D is the dimension of each vector</p>
 146
 147
 148
-149</pre>
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173</pre>
 </div>
 </td>
 <td class="code">
@@ -918,25 +1056,25 @@ vectors and D is the dimension of each vector</p>
 <tr>
 <td class="linenos">
 <div class="linenodiv">
-<pre><span></span> 93
- 94
- 95
- 96
- 97
- 98
- 99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111</pre>
+<pre><span></span>117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135</pre>
 </div>
 </td>
 <td class="code">
@@ -1030,24 +1168,24 @@ vectors and D is the dimension of each vector</p>
 <tr>
 <td class="linenos">
 <div class="linenodiv">
-<pre><span></span>73
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83
-84
-85
-86
-87
-88
-89
-90</pre>
+<pre><span></span> 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114</pre>
 </div>
 </td>
 <td class="code">

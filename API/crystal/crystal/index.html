@@ -1721,10 +1721,10 @@ asymmetric_unit consisting of self.unit_cell_molecules()</p>
 <tr>
 <td class="linenos">
 <div class="linenodiv">
-<pre><span></span>1628
-1629
-1630
-1631</pre>
+<pre><span></span>1658
+1659
+1660
+1661</pre>
 </div>
 </td>
 <td class="code">
@@ -1792,42 +1792,42 @@ as_P1_supercell<span class="p">(</span><span class="bp">self</span><span class="
 <tr>
 <td class="linenos">
 <div class="linenodiv">
-<pre><span></span>1633
-1634
-1635
-1636
-1637
-1638
-1639
-1640
-1641
-1642
-1643
-1644
-1645
-1646
-1647
-1648
-1649
-1650
-1651
-1652
-1653
-1654
-1655
-1656
-1657
-1658
-1659
-1660
-1661
-1662
-1663
+<pre><span></span>1663
 1664
 1665
 1666
 1667
-1668</pre>
+1668
+1669
+1670
+1671
+1672
+1673
+1674
+1675
+1676
+1677
+1678
+1679
+1680
+1681
+1682
+1683
+1684
+1685
+1686
+1687
+1688
+1689
+1690
+1691
+1692
+1693
+1694
+1695
+1696
+1697
+1698</pre>
 </div>
 </td>
 <td class="code">
@@ -1954,7 +1954,7 @@ crystal using the EEM method.</p>
 <div class="doc doc-object doc-method">
 <h3 class="doc doc-heading" id="chmpy.crystal.crystal.Crystal.atom_group_shape_descriptors">
 <code class="highlight language-python">
-atom_group_shape_descriptors<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">atoms</span><span class="p">,</span> <span class="n">l_max</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mf">3.8</span><span class="p">)</span> </code>
+atom_group_shape_descriptors<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">atoms</span><span class="p">,</span> <span class="n">l_max</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mf">6.0</span><span class="p">)</span> </code>
 </h3>
 <div class="doc doc-contents">
 <p>Calculate the shape descriptors[1,2] for the given atomic
@@ -1994,7 +1994,7 @@ transform of the molecular shape function.</p>
 <p>maximum distance (Angstroms) to include surroundings
 in the shape description</p>
 </td>
-<td><code>3.8</code></td>
+<td><code>6.0</code></td>
 </tr>
 </tbody>
 </table>
@@ -2029,26 +2029,7 @@ in the shape description</p>
 <tr>
 <td class="linenos">
 <div class="linenodiv">
-<pre><span></span>1176
-1177
-1178
-1179
-1180
-1181
-1182
-1183
-1184
-1185
-1186
-1187
-1188
-1189
-1190
-1191
-1192
-1193
-1194
-1195
+<pre><span></span>1195
 1196
 1197
 1198
@@ -2063,12 +2044,31 @@ in the shape description</p>
 1207
 1208
 1209
-1210</pre>
+1210
+1211
+1212
+1213
+1214
+1215
+1216
+1217
+1218
+1219
+1220
+1221
+1222
+1223
+1224
+1225
+1226
+1227
+1228
+1229</pre>
 </div>
 </td>
 <td class="code">
 <div class="highlight">
-<pre><span></span><code><span class="k">def</span> <span class="nf">atom_group_shape_descriptors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">atoms</span><span class="p">,</span> <span class="n">l_max</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mf">3.8</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<pre><span></span><code><span class="k">def</span> <span class="nf">atom_group_shape_descriptors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">atoms</span><span class="p">,</span> <span class="n">l_max</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mf">6.0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
     <span class="sd">"""Calculate the shape descriptors[1,2] for the given atomic</span>
 <span class="sd">    group in this crystal.</span>
 
@@ -2265,7 +2265,7 @@ atomic sites in question and their surroundings (as an array)</p>
 <div class="doc doc-object doc-method">
 <h3 class="doc doc-heading" id="chmpy.crystal.crystal.Crystal.atomic_shape_descriptors">
 <code class="highlight language-python">
-atomic_shape_descriptors<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">l_max</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mf">3.8</span><span class="p">)</span> </code>
+atomic_shape_descriptors<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">l_max</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mf">6.0</span><span class="p">,</span> <span class="n">return_coefficients</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> </code>
 </h3>
 <div class="doc doc-contents">
 <p>Calculate the shape descriptors[1,2] for all symmetry unique
@@ -2297,7 +2297,15 @@ transform of the molecular shape function.</p>
 <p>maximum distance (Angstroms) to include surroundings
 in the shape description</p>
 </td>
-<td><code>3.8</code></td>
+<td><code>6.0</code></td>
+</tr>
+<tr>
+<td><code>return_coefficients</code></td>
+<td><code>bool</code></td>
+<td>
+<p>also return the spherical harmonic coefficients</p>
+</td>
+<td><code>False</code></td>
 </tr>
 </tbody>
 </table>
@@ -2332,17 +2340,7 @@ in the shape description</p>
 <tr>
 <td class="linenos">
 <div class="linenodiv">
-<pre><span></span>1139
-1140
-1141
-1142
-1143
-1144
-1145
-1146
-1147
-1148
-1149
+<pre><span></span>1149
 1150
 1151
 1152
@@ -2367,12 +2365,31 @@ in the shape description</p>
 1171
 1172
 1173
-1174</pre>
+1174
+1175
+1176
+1177
+1178
+1179
+1180
+1181
+1182
+1183
+1184
+1185
+1186
+1187
+1188
+1189
+1190
+1191
+1192
+1193</pre>
 </div>
 </td>
 <td class="code">
 <div class="highlight">
-<pre><span></span><code><span class="k">def</span> <span class="nf">atomic_shape_descriptors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">l_max</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mf">3.8</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<pre><span></span><code><span class="k">def</span> <span class="nf">atomic_shape_descriptors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">l_max</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mf">6.0</span><span class="p">,</span> <span class="n">return_coefficients</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
     <span class="sd">"""</span>
 <span class="sd">    Calculate the shape descriptors[1,2] for all symmetry unique</span>
 <span class="sd">    atoms in this crystal.</span>
@@ -2382,6 +2399,7 @@ in the shape description</p>
 <span class="sd">            transform of the molecular shape function.</span>
 <span class="sd">        radius (float, optional): maximum distance (Angstroms) to include surroundings</span>
 <span class="sd">            in the shape description</span>
+<span class="sd">        return_coefficients (bool, optional): also return the spherical harmonic coefficients</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        shape description vector</span>
@@ -2395,6 +2413,7 @@ in the shape description</p>
 <span class="sd">    ```</span>
 <span class="sd">    """</span>
     <span class="n">descriptors</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">coeffs</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="kn">from</span> <span class="nn">chmpy.shape</span> <span class="kn">import</span> <span class="n">SHT</span><span class="p">,</span> <span class="n">stockholder_weight_descriptor</span>
 
     <span class="n">sph</span> <span class="o">=</span> <span class="n">SHT</span><span class="p">(</span><span class="n">l_max</span><span class="o">=</span><span class="n">l_max</span><span class="p">)</span>
@@ -2402,12 +2421,19 @@ in the shape description</p>
         <span class="n">radius</span><span class="o">=</span><span class="n">radius</span>
     <span class="p">):</span>
         <span class="n">ubound</span> <span class="o">=</span> <span class="n">Element</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">vdw_radius</span> <span class="o">*</span> <span class="mi">3</span>
-        <span class="n">descriptors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
-            <span class="n">stockholder_weight_descriptor</span><span class="p">(</span>
-                <span class="n">sph</span><span class="p">,</span> <span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="p">[</span><span class="n">pos</span><span class="p">],</span> <span class="n">neighbour_els</span><span class="p">,</span> <span class="n">neighbour_pos</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">ubound</span><span class="p">)</span>
-            <span class="p">)</span>
+        <span class="n">desc</span> <span class="o">=</span> <span class="n">stockholder_weight_descriptor</span><span class="p">(</span>
+            <span class="n">sph</span><span class="p">,</span> <span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="p">[</span><span class="n">pos</span><span class="p">],</span> <span class="n">neighbour_els</span><span class="p">,</span> <span class="n">neighbour_pos</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">ubound</span><span class="p">),</span>
+            <span class="n">coefficients</span><span class="o">=</span><span class="n">return_coefficients</span>
         <span class="p">)</span>
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">descriptors</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">return_coefficients</span><span class="p">:</span>
+            <span class="n">descriptors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">desc</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+            <span class="n">coeffs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">desc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">descriptors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">desc</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">return_coefficients</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">coeffs</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">descriptors</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">descriptors</span><span class="p">)</span>
 </code></pre>
 </div>
 </td>
@@ -2697,28 +2723,28 @@ for evaluation of transformations in cartesian space.</p>
 <tr>
 <td class="linenos">
 <div class="linenodiv">
-<pre><span></span>1670
-1671
-1672
-1673
-1674
-1675
-1676
-1677
-1678
-1679
-1680
-1681
-1682
-1683
-1684
-1685
-1686
-1687
-1688
-1689
-1690
-1691</pre>
+<pre><span></span>1700
+1701
+1702
+1703
+1704
+1705
+1706
+1707
+1708
+1709
+1710
+1711
+1712
+1713
+1714
+1715
+1716
+1717
+1718
+1719
+1720
+1721</pre>
 </div>
 </td>
 <td class="code">
@@ -2789,31 +2815,31 @@ or 'R' for rhombohedral (default 'H').</p>
 <tr>
 <td class="linenos">
 <div class="linenodiv">
-<pre><span></span>1602
-1603
-1604
-1605
-1606
-1607
-1608
-1609
-1610
-1611
-1612
-1613
-1614
-1615
-1616
-1617
-1618
-1619
-1620
-1621
-1622
-1623
-1624
-1625
-1626</pre>
+<pre><span></span>1632
+1633
+1634
+1635
+1636
+1637
+1638
+1639
+1640
+1641
+1642
+1643
+1644
+1645
+1646
+1647
+1648
+1649
+1650
+1651
+1652
+1653
+1654
+1655
+1656</pre>
 </div>
 </td>
 <td class="code">
@@ -2868,37 +2894,7 @@ of CIF data</p>
 <tr>
 <td class="linenos">
 <div class="linenodiv">
-<pre><span></span>1297
-1298
-1299
-1300
-1301
-1302
-1303
-1304
-1305
-1306
-1307
-1308
-1309
-1310
-1311
-1312
-1313
-1314
-1315
-1316
-1317
-1318
-1319
-1320
-1321
-1322
-1323
-1324
-1325
-1326
-1327
+<pre><span></span>1327
 1328
 1329
 1330
@@ -2932,7 +2928,37 @@ of CIF data</p>
 1358
 1359
 1360
-1361</pre>
+1361
+1362
+1363
+1364
+1365
+1366
+1367
+1368
+1369
+1370
+1371
+1372
+1373
+1374
+1375
+1376
+1377
+1378
+1379
+1380
+1381
+1382
+1383
+1384
+1385
+1386
+1387
+1388
+1389
+1390
+1391</pre>
 </div>
 </td>
 <td class="code">
@@ -3026,20 +3052,20 @@ from_cif_file<span class="p">(</span><span class="n">filename</span><span class=
 <tr>
 <td class="linenos">
 <div class="linenodiv">
-<pre><span></span>1363
-1364
-1365
-1366
-1367
-1368
-1369
-1370
-1371
-1372
-1373
-1374
-1375
-1376</pre>
+<pre><span></span>1393
+1394
+1395
+1396
+1397
+1398
+1399
+1400
+1401
+1402
+1403
+1404
+1405
+1406</pre>
 </div>
 </td>
 <td class="code">
@@ -3082,12 +3108,12 @@ from_shelx_file<span class="p">(</span><span class="n">filename</span><span clas
 <tr>
 <td class="linenos">
 <div class="linenodiv">
-<pre><span></span>1393
-1394
-1395
-1396
-1397
-1398</pre>
+<pre><span></span>1423
+1424
+1425
+1426
+1427
+1428</pre>
 </div>
 </td>
 <td class="code">
@@ -3122,20 +3148,20 @@ from_shelx_string<span class="p">(</span><span class="n">file_content</span><spa
 <tr>
 <td class="linenos">
 <div class="linenodiv">
-<pre><span></span>1400
-1401
-1402
-1403
-1404
-1405
-1406
-1407
-1408
-1409
-1410
-1411
-1412
-1413</pre>
+<pre><span></span>1430
+1431
+1432
+1433
+1434
+1435
+1436
+1437
+1438
+1439
+1440
+1441
+1442
+1443</pre>
 </div>
 </td>
 <td class="code">
@@ -3178,10 +3204,10 @@ from_vasp_file<span class="p">(</span><span class="n">filename</span><span class
 <tr>
 <td class="linenos">
 <div class="linenodiv">
-<pre><span></span>1292
-1293
-1294
-1295</pre>
+<pre><span></span>1322
+1323
+1324
+1325</pre>
 </div>
 </td>
 <td class="code">
@@ -3214,19 +3240,19 @@ from_vasp_string<span class="p">(</span><span class="n">string</span><span class
 <tr>
 <td class="linenos">
 <div class="linenodiv">
-<pre><span></span>1278
-1279
-1280
-1281
-1282
-1283
-1284
-1285
-1286
-1287
-1288
-1289
-1290</pre>
+<pre><span></span>1308
+1309
+1310
+1311
+1312
+1313
+1314
+1315
+1316
+1317
+1318
+1319
+1320</pre>
 </div>
 </td>
 <td class="code">
@@ -3711,27 +3737,27 @@ load<span class="p">(</span><span class="n">filename</span><span class="p">,</sp
 <tr>
 <td class="linenos">
 <div class="linenodiv">
-<pre><span></span>1256
-1257
-1258
-1259
-1260
-1261
-1262
-1263
-1264
-1265
-1266
-1267
-1268
-1269
-1270
-1271
-1272
-1273
-1274
-1275
-1276</pre>
+<pre><span></span>1286
+1287
+1288
+1289
+1290
+1291
+1292
+1293
+1294
+1295
+1296
+1297
+1298
+1299
+1300
+1301
+1302
+1303
+1304
+1305
+1306</pre>
 </div>
 </td>
 <td class="code">
@@ -3892,7 +3918,7 @@ along with optional void surface.</p>
 <div class="doc doc-object doc-method">
 <h3 class="doc doc-heading" id="chmpy.crystal.crystal.Crystal.molecular_shape_descriptors">
 <code class="highlight language-python">
-molecular_shape_descriptors<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">l_max</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mf">6.0</span><span class="p">,</span> <span class="n">with_property</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> </code>
+molecular_shape_descriptors<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">l_max</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mf">6.0</span><span class="p">,</span> <span class="n">with_property</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">return_coefficients</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> </code>
 </h3>
 <div class="doc doc-contents">
 <p>Calculate the molecular shape descriptors[1,2] for all symmetry unique
@@ -3933,6 +3959,14 @@ in the shape description</p>
 <p>name of the surface property to include in the shape description</p>
 </td>
 <td><code>None</code></td>
+</tr>
+<tr>
+<td><code>return_coefficients</code></td>
+<td><code>bool</code></td>
+<td>
+<p>also return the spherical harmonic coefficients</p>
+</td>
+<td><code>False</code></td>
 </tr>
 </tbody>
 </table>
@@ -4014,13 +4048,23 @@ in the shape description</p>
 1134
 1135
 1136
-1137</pre>
+1137
+1138
+1139
+1140
+1141
+1142
+1143
+1144
+1145
+1146
+1147</pre>
 </div>
 </td>
 <td class="code">
 <div class="highlight">
 <pre><span></span><code><span class="k">def</span> <span class="nf">molecular_shape_descriptors</span><span class="p">(</span>
-    <span class="bp">self</span><span class="p">,</span> <span class="n">l_max</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mf">6.0</span><span class="p">,</span> <span class="n">with_property</span><span class="o">=</span><span class="kc">None</span>
+    <span class="bp">self</span><span class="p">,</span> <span class="n">l_max</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mf">6.0</span><span class="p">,</span> <span class="n">with_property</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">return_coefficients</span><span class="o">=</span><span class="kc">False</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
     <span class="sd">"""</span>
 <span class="sd">    Calculate the molecular shape descriptors[1,2] for all symmetry unique</span>
@@ -4032,6 +4076,7 @@ in the shape description</p>
 <span class="sd">        radius (float, optional): maximum distance (Angstroms) to include surroundings</span>
 <span class="sd">            in the shape description</span>
 <span class="sd">        with_property (str, optional): name of the surface property to include in the shape description</span>
+<span class="sd">        return_coefficients (bool, optional): also return the spherical harmonic coefficients</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        shape description vector</span>
@@ -4045,6 +4090,7 @@ in the shape description</p>
 <span class="sd">    ```</span>
 <span class="sd">    """</span>
     <span class="n">descriptors</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">coeffs</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="kn">from</span> <span class="nn">chmpy.shape</span> <span class="kn">import</span> <span class="n">SHT</span><span class="p">,</span> <span class="n">stockholder_weight_descriptor</span>
 
     <span class="n">sph</span> <span class="o">=</span> <span class="n">SHT</span><span class="p">(</span><span class="n">l_max</span><span class="o">=</span><span class="n">l_max</span><span class="p">)</span>
@@ -4054,19 +4100,27 @@ in the shape description</p>
         <span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">mol</span><span class="o">.</span><span class="n">centroid</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
         <span class="n">dists</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">mol</span><span class="o">.</span><span class="n">positions</span> <span class="o">-</span> <span class="n">c</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
         <span class="n">bounds</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">dists</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">dists</span><span class="p">)</span> <span class="o">+</span> <span class="mf">10.0</span>
-        <span class="n">descriptors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
-            <span class="n">stockholder_weight_descriptor</span><span class="p">(</span>
-                <span class="n">sph</span><span class="p">,</span>
-                <span class="n">mol</span><span class="o">.</span><span class="n">atomic_numbers</span><span class="p">,</span>
-                <span class="n">mol</span><span class="o">.</span><span class="n">positions</span><span class="p">,</span>
-                <span class="n">neighbour_els</span><span class="p">,</span>
-                <span class="n">neighbour_pos</span><span class="p">,</span>
-                <span class="n">origin</span><span class="o">=</span><span class="n">c</span><span class="p">,</span>
-                <span class="n">bounds</span><span class="o">=</span><span class="n">bounds</span><span class="p">,</span>
-                <span class="n">with_property</span><span class="o">=</span><span class="n">with_property</span><span class="p">,</span>
-            <span class="p">)</span>
+        <span class="n">descriptor</span> <span class="o">=</span> <span class="n">stockholder_weight_descriptor</span><span class="p">(</span>
+            <span class="n">sph</span><span class="p">,</span>
+            <span class="n">mol</span><span class="o">.</span><span class="n">atomic_numbers</span><span class="p">,</span>
+            <span class="n">mol</span><span class="o">.</span><span class="n">positions</span><span class="p">,</span>
+            <span class="n">neighbour_els</span><span class="p">,</span>
+            <span class="n">neighbour_pos</span><span class="p">,</span>
+            <span class="n">origin</span><span class="o">=</span><span class="n">c</span><span class="p">,</span>
+            <span class="n">bounds</span><span class="o">=</span><span class="n">bounds</span><span class="p">,</span>
+            <span class="n">with_property</span><span class="o">=</span><span class="n">with_property</span><span class="p">,</span>
+            <span class="n">coefficients</span><span class="o">=</span><span class="n">return_coefficients</span>
         <span class="p">)</span>
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">descriptors</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">return_coefficients</span><span class="p">:</span>
+            <span class="n">coeffs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">descriptor</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">descriptors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">descriptor</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">descriptors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">descriptor</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">return_coefficients</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">coeffs</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">descriptors</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">descriptors</span><span class="p">)</span>
 </code></pre>
 </div>
 </td>
@@ -4917,18 +4971,18 @@ save<span class="p">(</span><span class="bp">self</span><span class="p">,</span>
 <tr>
 <td class="linenos">
 <div class="linenodiv">
-<pre><span></span>1589
-1590
-1591
-1592
-1593
-1594
-1595
-1596
-1597
-1598
-1599
-1600</pre>
+<pre><span></span>1619
+1620
+1621
+1622
+1623
+1624
+1625
+1626
+1627
+1628
+1629
+1630</pre>
 </div>
 </td>
 <td class="code">
@@ -5466,37 +5520,7 @@ and the resulting neighbouring atoms</p>
 <tr>
 <td class="linenos">
 <div class="linenodiv">
-<pre><span></span>1693
-1694
-1695
-1696
-1697
-1698
-1699
-1700
-1701
-1702
-1703
-1704
-1705
-1706
-1707
-1708
-1709
-1710
-1711
-1712
-1713
-1714
-1715
-1716
-1717
-1718
-1719
-1720
-1721
-1722
-1723
+<pre><span></span>1723
 1724
 1725
 1726
@@ -5534,7 +5558,37 @@ and the resulting neighbouring atoms</p>
 1758
 1759
 1760
-1761</pre>
+1761
+1762
+1763
+1764
+1765
+1766
+1767
+1768
+1769
+1770
+1771
+1772
+1773
+1774
+1775
+1776
+1777
+1778
+1779
+1780
+1781
+1782
+1783
+1784
+1785
+1786
+1787
+1788
+1789
+1790
+1791</pre>
 </div>
 </td>
 <td class="code">
@@ -5908,38 +5962,38 @@ to_cif_data<span class="p">(</span><span class="bp">self</span><span class="p">,
 <tr>
 <td class="linenos">
 <div class="linenodiv">
-<pre><span></span>1447
-1448
-1449
-1450
-1451
-1452
-1453
-1454
-1455
-1456
-1457
-1458
-1459
-1460
-1461
-1462
-1463
-1464
-1465
-1466
-1467
-1468
-1469
-1470
-1471
-1472
-1473
-1474
-1475
-1476
-1477
-1478</pre>
+<pre><span></span>1477
+1478
+1479
+1480
+1481
+1482
+1483
+1484
+1485
+1486
+1487
+1488
+1489
+1490
+1491
+1492
+1493
+1494
+1495
+1496
+1497
+1498
+1499
+1500
+1501
+1502
+1503
+1504
+1505
+1506
+1507
+1508</pre>
 </div>
 </td>
 <td class="code">
@@ -5997,10 +6051,10 @@ to_cif_file<span class="p">(</span><span class="bp">self</span><span class="p">,
 <tr>
 <td class="linenos">
 <div class="linenodiv">
-<pre><span></span>1540
-1541
-1542
-1543</pre>
+<pre><span></span>1570
+1571
+1572
+1573</pre>
 </div>
 </td>
 <td class="code">
@@ -6030,10 +6084,10 @@ to_cif_string<span class="p">(</span><span class="bp">self</span><span class="p"
 <tr>
 <td class="linenos">
 <div class="linenodiv">
-<pre><span></span>1545
-1546
-1547
-1548</pre>
+<pre><span></span>1575
+1576
+1577
+1578</pre>
 </div>
 </td>
 <td class="code">
@@ -6153,9 +6207,9 @@ to_poscar_file<span class="p">(</span><span class="bp">self</span><span class="p
 <tr>
 <td class="linenos">
 <div class="linenodiv">
-<pre><span></span>1556
-1557
-1558</pre>
+<pre><span></span>1586
+1587
+1588</pre>
 </div>
 </td>
 <td class="code">
@@ -6184,11 +6238,11 @@ to_poscar_string<span class="p">(</span><span class="bp">self</span><span class=
 <tr>
 <td class="linenos">
 <div class="linenodiv">
-<pre><span></span>1550
-1551
-1552
-1553
-1554</pre>
+<pre><span></span>1580
+1581
+1582
+1583
+1584</pre>
 </div>
 </td>
 <td class="code">
@@ -6219,9 +6273,9 @@ to_shelx_file<span class="p">(</span><span class="bp">self</span><span class="p"
 <tr>
 <td class="linenos">
 <div class="linenodiv">
-<pre><span></span>1560
-1561
-1562</pre>
+<pre><span></span>1590
+1591
+1592</pre>
 </div>
 </td>
 <td class="code">
@@ -6250,30 +6304,30 @@ to_shelx_string<span class="p">(</span><span class="bp">self</span><span class="
 <tr>
 <td class="linenos">
 <div class="linenodiv">
-<pre><span></span>1564
-1565
-1566
-1567
-1568
-1569
-1570
-1571
-1572
-1573
-1574
-1575
-1576
-1577
-1578
-1579
-1580
-1581
-1582
-1583
-1584
-1585
-1586
-1587</pre>
+<pre><span></span>1594
+1595
+1596
+1597
+1598
+1599
+1600
+1601
+1602
+1603
+1604
+1605
+1606
+1607
+1608
+1609
+1610
+1611
+1612
+1613
+1614
+1615
+1616
+1617</pre>
 </div>
 </td>
 <td class="code">
@@ -6361,42 +6415,42 @@ to_translational_symmetry<span class="p">(</span><span class="bp">self</span><sp
 <tr>
 <td class="linenos">
 <div class="linenodiv">
-<pre><span></span>1503
-1504
-1505
-1506
-1507
-1508
-1509
-1510
-1511
-1512
-1513
-1514
-1515
-1516
-1517
-1518
-1519
-1520
-1521
-1522
-1523
-1524
-1525
-1526
-1527
-1528
-1529
-1530
-1531
-1532
-1533
+<pre><span></span>1533
 1534
 1535
 1536
 1537
-1538</pre>
+1538
+1539
+1540
+1541
+1542
+1543
+1544
+1545
+1546
+1547
+1548
+1549
+1550
+1551
+1552
+1553
+1554
+1555
+1556
+1557
+1558
+1559
+1560
+1561
+1562
+1563
+1564
+1565
+1566
+1567
+1568</pre>
 </div>
 </td>
 <td class="code">
