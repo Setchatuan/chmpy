@@ -946,6 +946,80 @@ class Crystal:
         "Alias for `self.stockholder_weight_isosurfaces`"
         return self.stockholder_weight_isosurfaces(**kwargs)
 
+    
+    def get_di_de(self, kind="mol", **kwargs):
+        """
+        Calculate stockholder weight isosurfaces (i.e. Hirshfeld surfaces)
+        for each symmetry unique molecule or atom in this crystal
+        + the shortest distance to the atoms within ("d_i") and outside ("d_e") the enclosed volume
+
+        Args:
+            kind (str, optional): dictates whether we calculate surfaces for each unique molecule
+                or for each unique atom
+            kwargs: keyword arguments passed to `stockholder_weight_isosurface`.
+
+                Options include:
+                ```
+                isovalue: float, optional
+                    level set value for the isosurface (default=0.5). Must be between
+                    0 and 1, but values other than 0.5 probably won't make sense anyway.
+                separation: float, optional
+                    separation between density grid used in the surface calculation
+                    (default 0.2) in Angstroms.
+                radius: float, optional
+                    maximum distance for contributing neighbours for the stockholder
+                    weight calculation
+                ```
+
+        Returns:
+            A list containing the distances (d_i,d_e) for each symmetry unique molecules [n_mol, [len(d_i), len(d_e)]]
+        """    
+    
+        from chmpy import StockholderWeight
+        from chmpy.surface import stockholder_weight_isosurface
+        from chmpy.util.color import property_to_color
+        import trimesh
+
+        sep = kwargs.get("separation", kwargs.get("resolution", 0.2))
+        radius = kwargs.get("radius", 12.0)
+        isovalue = kwargs.get("isovalue", 0.5)
+        meshes = []
+        extra_props = {}
+        isos = []
+
+        if kind == "atom":
+            for n, pos, neighbour_els, neighbour_pos in self.atomic_surroundings(
+                radius=radius
+            ):
+                s = StockholderWeight.from_arrays(
+                    [n], [pos], neighbour_els, neighbour_pos
+                )
+                iso = stockholder_weight_isosurface(s, isovalue=isovalue, sep=sep)
+                isos.append(iso)
+        elif kind == "mol":
+            for i, (mol, n_e, n_p) in enumerate(
+                self.molecule_environments(radius=radius)
+            ):
+                s = StockholderWeight.from_arrays(
+                    mol.atomic_numbers, mol.positions, n_e, n_p
+                )
+                iso = stockholder_weight_isosurface(
+                    s, isovalue=isovalue, sep=sep, extra_props=extra_props
+                )
+                isos.append(iso)
+        else:
+            for arr in self.functional_group_surroundings(radius=radius, kind=kind):
+                s = StockholderWeight.from_arrays(*arr)
+                iso = stockholder_weight_isosurface(s, isovalue=isovalue, sep=sep)
+                isos.append(iso)
+
+        dide_list = []
+
+        for iso in isos:
+            dide_list.append([iso.vertex_prop["d_i"],iso.vertex_prop["d_e"]])
+
+        return dide_list
+    
     def stockholder_weight_isosurfaces(self, kind="mol", **kwargs) -> List[Trimesh]:
         """
         Calculate stockholder weight isosurfaces (i.e. Hirshfeld surfaces)
